@@ -113,7 +113,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Foundation/" style="font-size: 10px;">Foundation</a> <a href="/tags/Framework/" style="font-size: 10px;">Framework</a> <a href="/tags/IOS/" style="font-size: 20px;">IOS</a> <a href="/tags/Objective-C/" style="font-size: 15px;">Objective-C</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/解决方案/" style="font-size: 10px;">解决方案</a> <a href="/tags/随笔/" style="font-size: 15px;">随笔</a>
+						<a href="/tags/Foundation/" style="font-size: 10px;">Foundation</a> <a href="/tags/Framework/" style="font-size: 10px;">Framework</a> <a href="/tags/IOS/" style="font-size: 20px;">IOS</a> <a href="/tags/Objective-C/" style="font-size: 13.33px;">Objective-C</a> <a href="/tags/Swift/" style="font-size: 10px;">Swift</a> <a href="/tags/hexo/" style="font-size: 16.67px;">hexo</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/解决方案/" style="font-size: 10px;">解决方案</a> <a href="/tags/随笔/" style="font-size: 13.33px;">随笔</a>
 					</div>
 				</section>
 				
@@ -200,6 +200,76 @@
 	</div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-swift-underline" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/06/20/swift-underline/" class="article-date">
+  	<time datetime="2015-06-20T08:36:08.000Z" itemprop="datePublished">6月 20 2015</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/06/20/swift-underline/">Swift中下划线和＂#＂的妙</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<p>在Swift中，下划线和”#”有很多妙用，这里将已经看到的妙用进行总结，希望可以帮助更多学习Swift的朋友。1.格式化数字字面量。通过使用下划线可以提高数字字面量的可读性。</p>
+<h2 id="1-格式化数字字面量">1.格式化数字字面量</h2><p>通过使用下划线可以提高数字字面量的可读性，例如：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> paddedDouble = <span class="number">123.000</span>_001   </span><br><span class="line"><span class="built_in">let</span> oneMillion = <span class="number">1</span>_000_000</span><br></pre></td></tr></table></figure></p>
+<h2 id="2-忽略元组的元素值">2.忽略元组的元素值</h2><p>当我们使用元组时，如果有的元素不需要使用，这时可以使用下划线将相应的元素进行忽略，例如：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> http404Error = (<span class="number">404</span>, <span class="string">"Not Found"</span>)   </span><br><span class="line"><span class="built_in">let</span> (_, errorMessage) = http404Error</span><br></pre></td></tr></table></figure></p>
+<p>代码中，只关心http404Error中第二个元素的值，所以第一个元素可以使用下划线进行忽略。</p>
+<h2 id="3-忽略区间值">3.忽略区间值</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> base = <span class="number">3</span>   </span><br><span class="line"><span class="built_in">let</span> power = <span class="number">10</span>   </span><br><span class="line">var answer = <span class="number">1</span>   </span><br><span class="line"><span class="keyword">for</span> _ <span class="keyword">in</span> <span class="number">1</span>...power &#123;   </span><br><span class="line">    answer *= base   </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>有时候我们并不关心区间内每一项的值，可以使用下划线来忽略这些值。</p>
+<h2 id="4-忽略外部参数名">4.忽略外部参数名</h2><p>(1)忽略方法的默认外部参数名<br>在使用方法（类方法或者实例方法）时，方法的第二个参数名及后续的参数名，默认既是内部参数名，又是外部参数名，如果不想提供外部参数名，可以在参数名前添加下划线来忽略外部参数名。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">class Counter &#123;   </span><br><span class="line">    var count: Int = <span class="number">0</span>   </span><br><span class="line">    func incrementBy(amount: Int, numberOfTimes: Int) &#123;   </span><br><span class="line">        count += amount * numberOfTimes   </span><br><span class="line">    &#125;   </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>在上面的代码中，方法incrementBy()中的numberOfTimes具有默认的外部参数名：numberOfTimes，如果不想使用外部参数名可以使用下划线进行忽略，代码可以写为（不过为了提高代码的可读性，一般不进行忽略）：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">class Counter &#123;   </span><br><span class="line">    var count: Int = <span class="number">0</span>   </span><br><span class="line">    func incrementBy(amount: Int, _ numberOfTimes: Int) &#123;   </span><br><span class="line">        count += amount * numberOfTimes   </span><br><span class="line">    &#125;   </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>(2)忽略具有默认值的参数的外部参数名<br>当函数（或者方法）的参数具有默认值时，Swift自动为该参数提供与参数名一致的默认外部参数名，因此在进行函数调用的时候，要提供默认参数名，可以使用下划线进行忽略默认外部参数名(但是不推荐忽略外部参数名，这主要是为了调用的时候可以方便地知道每个参数的含义)。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">func join(s1: String, s2: String, joiner: String = <span class="string">" "</span>) -&gt; String &#123;   </span><br><span class="line">    <span class="built_in">return</span> s1 + joiner + s2   </span><br><span class="line">&#125;   </span><br><span class="line">// call the function.   </span><br><span class="line">join(<span class="string">"hello"</span>, <span class="string">"world"</span>, joiner: <span class="string">"-"</span>)</span><br></pre></td></tr></table></figure></p>
+<p>如果不想使用默认外部参数名，可以进行如下修改：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">func join(s1: String, s2: String, _ joiner: String = <span class="string">" "</span>) -&gt; String &#123;   </span><br><span class="line">    <span class="built_in">return</span> s1 + joiner + s2   </span><br><span class="line">&#125;   </span><br><span class="line">// call the function.   </span><br><span class="line">join(<span class="string">"hello"</span>, <span class="string">"world"</span>, <span class="string">"-"</span>)</span><br></pre></td></tr></table></figure></p>
+<h1 id="在Swift中，”#”有一些妙用：">在Swift中，”#”有一些妙用：</h1><p>1.配置外部参数名<br>在函数（或者方法）的参数名前添加”#”，可以使该参数拥有相同的本地参数名和外部参数名。</p>
+<p>注：在方法中，第二个及后续的参数，默认是具有和内部参数一致的外部参数名的，只有第一个参数没有，可以使用”#”符号来强制给第一个参数添加与本地参数名一致的外部参数名，但是不推荐。</p>
+<p>(1)函数<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">func incrementBy(amount: Int, <span class="comment">#numberOfTimes: Int) &#123;   </span></span><br><span class="line">    count += amount * numberOfTimes   </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>numberOfTimes的本地参数名（只能在函数内部使用）和外部参数名（在调用函数的时候作为标签使用）都是numberOfTimes。</p>
+<p>(2)方法<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">class Counter &#123;   </span><br><span class="line">    var count: Int = <span class="number">0</span>   </span><br><span class="line">    func incrementBy(<span class="comment">#amount: Int, numberOfTimes: Int) &#123;   </span></span><br><span class="line">        count += amount * numberOfTimes   </span><br><span class="line">    &#125;   </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>numberOfTimes默认具有本地参数名和外部参数名，amount没有外部参数名，使用”#”为amount强制指定外部参数名，在调用该方法的时候，必须使用外部参数名，否则会出现编译错误，提示缺少参数标签。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var counter = Counter()   </span><br><span class="line">counter.incrementBy(amount: <span class="number">4</span>, numberOfTimes: <span class="number">5</span>)   </span><br><span class="line">println(counter.count) // the result is <span class="number">20</span></span><br></pre></td></tr></table></figure></p>
+<p>原文网址：<a href="http://www.cocoachina.com/industry/20140630/8982.html" target="_blank" rel="external">http://www.cocoachina.com/industry/20140630/8982.html</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/IOS/">IOS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Swift/">Swift</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
   
     <article id="post-IOS-learn-link" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -953,68 +1023,10 @@
 
 
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   
-    <div class="article-meta">
-      <a href="/2015/05/20/hello-world/" class="article-date">
-  	<time datetime="2015-05-20T12:13:33.000Z" itemprop="datePublished">5月 20 2015</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/05/20/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 </div>
       <footer id="footer">
