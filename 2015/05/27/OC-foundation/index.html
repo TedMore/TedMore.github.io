@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>iOS7中Objective-C和Foundation的新特性 | Ted Chen&#39;s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="注意事项（Ray）：文章来自iOS 7 by Tutorials  iOS 7Feast的一部分（略）
+Objective-C 是最重要的iOS和OSX apps的开发工具。你可以使用其他语言的第三方框架开发apps，例如HTML&amp;amp;Javascript或者C#，但是如果你很快的写出一个超炫的高效率的原声apps你就需要使Objective-C。
+Foundation 是你开发Objecti">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS7中Objective-C和Foundation的新特性">
+<meta property="og:url" content="http://yoursite.com/2015/05/27/OC-foundation/index.html">
+<meta property="og:site_name" content="Ted Chen's blog">
+<meta property="og:description" content="注意事项（Ray）：文章来自iOS 7 by Tutorials  iOS 7Feast的一部分（略）
+Objective-C 是最重要的iOS和OSX apps的开发工具。你可以使用其他语言的第三方框架开发apps，例如HTML&amp;amp;Javascript或者C#，但是如果你很快的写出一个超炫的高效率的原声apps你就需要使Objective-C。
+Foundation 是你开发Objecti">
+<meta property="og:updated_time" content="2015-07-19T14:42:55.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="iOS7中Objective-C和Foundation的新特性">
+<meta name="twitter:description" content="注意事项（Ray）：文章来自iOS 7 by Tutorials  iOS 7Feast的一部分（略）
+Objective-C 是最重要的iOS和OSX apps的开发工具。你可以使用其他语言的第三方框架开发apps，例如HTML&amp;amp;Javascript或者C#，但是如果你很快的写出一个超炫的高效率的原声apps你就需要使Objective-C。
+Foundation 是你开发Objecti">
+  
+    <link rel="alternative" href="/atom.xml" title="Ted Chen&#39;s blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			<img lazy-src="http://tp3.sinaimg.cn/1503812550/180/5731850460/1" class="js-avatar">
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Ted Chen</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">时间不老，我们不散</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/tags/随笔">随笔</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/TedMore" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/1503812550" title="weibo">weibo</a>
+					        
+								<a class="mail" target="_blank" href="mailto://chentao623tmc@126.com" title="mail">mail</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/Foundation/" style="font-size: 10px;">Foundation</a> <a href="/tags/Framework/" style="font-size: 10px;">Framework</a> <a href="/tags/Objective-C/" style="font-size: 13.33px;">Objective-C</a> <a href="/tags/Swift/" style="font-size: 10px;">Swift</a> <a href="/tags/code/" style="font-size: 10px;">code</a> <a href="/tags/hexo/" style="font-size: 16.67px;">hexo</a> <a href="/tags/iOS/" style="font-size: 20px;">iOS</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/杂谈/" style="font-size: 10px;">杂谈</a> <a href="/tags/解决方案/" style="font-size: 10px;">解决方案</a> <a href="/tags/随笔/" style="font-size: 13.33px;">随笔</a> <a href="/tags/面试题/" style="font-size: 10px;">面试题</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://www.zybuluo.com/mdeditor">Markdown编辑器</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://coderq.com/">码农圈</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://wuchong.me/">The author&#39;s blog of Jacman</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://ibruce.info/">不如的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://yangxiaolei.me/">Yangxiaolei&#39;s blog</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://lukang.me/">KangLu&#39;s Blog</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://haomwei.com/">屠城｜屠夫9441的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.matrix67.com/blog/">Matrix67</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.cnblogs.com/1208/">1208博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">不喜欢分享的人不一定是最帅的，但喜欢分享的人一定是最帅的。</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Ted Chen</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="http://tp3.sinaimg.cn/1503812550/180/5731850460/1" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Ted Chen</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">时间不老，我们不散</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/tags/随笔">随笔</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/TedMore" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/1503812550" title="weibo">weibo</a>
+			        
+						<a class="mail" target="_blank" href="mailto://chentao623tmc@126.com" title="mail">mail</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-OC-foundation" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/05/27/OC-foundation/" class="article-date">
+  	<time datetime="2015-05-27T09:15:30.000Z" itemprop="datePublished">5月 27 2015</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      iOS7中Objective-C和Foundation的新特性
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Foundation/">Foundation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Objective-C/">Objective-C</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<p>注意事项（Ray）：文章来自iOS 7 by Tutorials  iOS 7Feast的一部分（略）</p>
+<p><strong>Objective-C</strong> 是最重要的iOS和OSX apps的开发工具。你可以使用其他语言的第三方框架开发apps，例如HTML&amp;Javascript或者C#，但是如果你很快的写出一个超炫的高效率的原声apps你就需要使Objective-C。</p>
+<p><strong>Foundation</strong> 是你开发Objective-C应用时用到的核心框架之一。</p>
+<p>作为一名iOS开发者，非常有必要了解最新的Objective-C和Foundation的特性，在iOS7中有了一些重要的改变需要你了解。</p>
+<p>在这篇文章中，你将快速浏览一些在Objective-C和Foundation中新的功能。</p>
+<h2 id="1-Modules（模块）">1.Modules（模块）</h2><p>机会是好的，你已经写了一千遍或更多＃import语句：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#import    </span></span><br><span class="line"><span class="comment">#import    </span></span><br><span class="line"><span class="comment">#import</span></span><br></pre></td></tr></table></figure></p>
+<p>这个语法要追溯到Objective-C的根：vanilla C。#import语句是预处理器指令和#include有类似的方式工作。唯一的区别是#import不会导入已经导入的头文件；它是一次性处理。</p>
+<p>当预处理遇到一个#import命令时，就会按字面的意思用被导入的头文件的全部内容替换那一行。预编译会递归的这么处理，即使可能是大量的头文件。</p>
+<p>UIKit的头文件，UIKit.h，包含了UIKit框架中包含的所有其他头文件。这意味着，您不必手动导入每个框架的头文件，例如UIViewController.h，UIView.h UIButton.h的。</p>
+<p>对UIKit框架的大小感到好奇嘛？通过计算所有行的全部UIKit中的头，你会发现它相当于超过11,000行代码！</p>
+<p>在一个标准的iOS应用，你会在您的大部分文件中导入的UIKit，这意味着每一个文件最终被长11000行。这是不够理想的，更多的代码意味着更长的编译时间。</p>
+<h3 id="1-1_原始解决方案：预编译头文件（Original_solution:_Pre-compiled_Headers）">1.1 原始解决方案：预编译头文件（Original solution: Pre-compiled Headers）</h3><p>预编译的头文件，或PCH文件，试图解决这个问题，通过提供在编译的预处理阶段预先计算和缓存需要的代码。你可能看过Xcode生成的stock PCH 文件，像下面这样：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#import    </span></span><br><span class="line"><span class="comment">#ifndef __IPHONE_5_0   </span></span><br><span class="line"><span class="comment">#warning "This project uses features only available in iOS SDK 5.0 and later."   </span></span><br><span class="line"><span class="comment">#endif   </span></span><br><span class="line">   </span><br><span class="line"><span class="comment">#ifdef __OBJC__   </span></span><br><span class="line">    <span class="comment">#import    </span></span><br><span class="line">    <span class="comment">#import    </span></span><br><span class="line"><span class="comment">#endif</span></span><br></pre></td></tr></table></figure></p>
+<p>如果开发人员开发的app的targets是iOS5之前的一个SDK,#warning将通知他们。UIKit和Foundation umbrella 头文件是stockPCH的一部分。因为在您的应用程序里的每一个文件将使用Foundation并且大部分会使用UIKit。因此这些都是很好的添加对于PCH文件以便于在你的APP中预先计算和缓存这些文件的编译文件。</p>
+<p>你可能会问“这有什么问题嘛？”PCH没有任何技术性的问题就像是——if it isn’t broke, don’tfix it（没有坏，就不要修）。然而你可能错失了很多性能优势，由于一个易维护的、高度优化的PCH文件导致（你可能会错过了一台主机上的维护良好的，高度优化的PCH文件的性能优势）。例如你可能在好几个地方用到Map Kit框架，你就会看到了通过添加Map Kit umbrella头文件或者单独的你用到的Map Kit类头文件到PCH文件中对编译时间的提升。</p>
+<p>我们都是lazy developers ，没有人有时间去维护我们工作的项目的PCH文件。那就是为什么modules被开发为LLVM的特性。</p>
+<p><span style="color:red">注意事项：LLVM是一个模块化和可重复使用的编译器和工具技术与Xcode捆绑的集合。 LLVM有几个组成部分：对oc开发者最重要的是clang，原生的C、C++和Objective-C编译器；和LLDB，原生debugger—开发者最好的朋友。</span></p>
+<h3 id="1-2_新的解决方案：模块_（Modules）">1.2 新的解决方案：模块 （Modules）</h3><p>Modules第一次在Objective-C中公共露面是在2012 LLVM开发者大会上Apple’s Doug Gregor的一次谈话。这是一次迷人的谈话，强烈推荐给对编译感兴趣的人。你可以在线看这些视频：<a href="http://llvm.org/devmtg/2012-11/#talk6。" target="_blank" rel="external">http://llvm.org/devmtg/2012-11/#talk6。</a></p>
+<p>Modules封装框架比以往任何时候更加清洁。不再需要预处理逐行地用文件所有内容替换#import指令。相反，一个模块包含了一个框架到自包含的块中，就像PCH文件预编译的方式一样提升了编译速度。并且你不需要在PCH文件中声明你要用到哪些框架，使用Modules简单的获得了速度上的提升。</p>
+<p>但是Modules不只有这些，我相信你会想起这些步骤当你第一次在一个app使用一个新的框架的时候，就像下面这样：<br>(1).在使用框架的文件中添加#import<br>(2).用的框架写代码<br>(3).编译<br>(4).查看链接错误<br>(5).想起忘记链接的框架<br>(6).添加忘记的框架到项目中<br>(7).重新编译</p>
+<p>忘记链接框架式是一件经常的犯的错误，但是Modules解决的非常好。</p>
+<p>一个Modules不仅告诉编译器哪些头文件组成了Modules，而且还告诉编译器什么需要链接。这个就解救了你不用你去手动的链接框架。这虽然是一件小事，但是能让开发更加简单就是一件好事。</p>
+<h3 id="1-3_怎样使用Modules">1.3 怎样使用Modules</h3><p>Modules的使用相当简单。对于存在的工程，第一件事情就是使这个功能生效。你可以在项目的Build Settings通过搜索Modules找到这个选项，改变Enable Modules 选项为YES，像这样：</p>
+<p>所有的新工程都是默认开启这个功能的，但是你应该在你所有存在的工程内都开启这个功能。</p>
+<p>Link Frameworks Automatically选项可以用来开启或者关闭自动连接框架的功能，就像描述的那么简单。还是有一点原因的为什么你会想要关闭这个功能。</p>
+<p>一旦Modules功能开启，你就可以在你的代码中使用它了。像这样做，对以前用到的语法有一点小小的改动。用@import代替#import：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@import UIKit;   </span><br><span class="line">@import MapKit;   </span><br><span class="line">@import iAd;</span><br></pre></td></tr></table></figure></p>
+<p>只导入一个框架中你需要的部分也是可能的。例如你只想要导入UIView，你就这样写：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@import UIKit.UIView;</span><br></pre></td></tr></table></figure></p>
+<p>对的-他真的是这么简单，技术上，你不需要把所有的#import都换成@import，因为编译器会隐式的转换他们。然而尽可能的用新的语法还是好的习惯。</p>
+<p>在你兴奋的要开始使用Modules之前，不幸的是有一个小警告。Xcode5的Modules还不支持你自己的或者第三方的框架。这是一个不幸的缺点，没有事情是完美的，即使是Objective-C！</p>
+<h2 id="2-新的返回类型-instancetype">2.新的返回类型-instancetype</h2><p>Objective-C添加了一个新的返回类型，名字叫instancetype。这个仅仅被用作Objective-C方法的返回类型和对编译器的一个暗示，暗示方法的返回类型将是这个方法属于的类的实例。</p>
+<p>注意事项： 这个特征在iOS7和Xcode上没有严格，但是随着时间的推移会被悄悄的加进最近的Clang。然而Xcode5第一次声明苹果已经在他们的框架中使用了这个。你可以再官方的Clang网页看到更多的内容：<a href="http://clang.llvm.org/docs/LanguageExtensions.html#objective-c-features" target="_blank" rel="external">http://clang.llvm.org/docs/LanguageExtensions.html#objective-c-features</a></p>
+<p>为什么要使用instancetype呢？看看下面的代码：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">NSDictionary *d = [NSArray arrayWithObjects:@(<span class="number">1</span>), @(<span class="number">2</span>), nil];   </span><br><span class="line">NSLog(@<span class="string">"%i"</span>, d.count);</span><br></pre></td></tr></table></figure></p>
+<p>虽然这个明显是不正确的，但是编译器却不会提醒你任何错误。自己尝试一下在Xcode4.6下编译。你将看到没有任何警告，但是这段代码明显是错误的。这段代码甚至能够没有异常的跑起来，因为NSDictory和NSArray的实例都能相应count。</p>
+<p>这段代码正常的原因是由于Objective-C的强大的动态特性。这个类型是对编译器的一个指导。Count方法在运行的时候被查找无论什么类，正好dictionary变量有这个方法。在这种情况下，count方法存在，编译器相信他是正确的。然而稍后你用到了NSDictionary有而NSArray没有的方法例如objectAtIndex：就会出现问题。首先他不会明确指出问题出现在哪里。</p>
+<p>但是问什么编译器没有指出 +[NSArray arrayWithObjects:]方法返回的实例不是NSDictionary实例呢？那是因为这个方法声明如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">+ (id)arrayWithObjects:(id)firstObj, ...;</span><br></pre></td></tr></table></figure></p>
+<p>注意到返回类型是id。id类型是一个意味着任何Objective-C类的umbrella类型。他甚至都不是NSObject的子类。方法没有返回类型信息而不是返回Objective-C类的实例。这样做是有用的，当你隐式的转换id到一个确切的类型时编译器不会警告你。例如上面的NSDictionary例子。如果产生警告，id就没有用啦。</p>
+<p>但是这个方法的返回类型为什么是id呢？你可以子类化这个方法然后仍然没有问题的使用它。为了证明为什么,考虑下面的NSArray的子类：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@interface MyArray : NSArray   </span><br><span class="line">@end</span><br></pre></td></tr></table></figure></p>
+<p>现在考虑下你的子类在下面的代码的使用：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MyArray *array = [MyArray arrayWithObjects:@(<span class="number">1</span>), @(<span class="number">2</span>), nil];</span><br></pre></td></tr></table></figure></p>
+<p>现在你应该知道为什么arrayWithObjects:返回类型必须是id。如果是NSArray*，这个子类需要转化成必要的类。这就是新的instancetype返回类型用到的地方。如果你看iOS7SDK中NSArray的头文件，你将注意到这个方法变成了下面的样子：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">+ (instancetype)arrayWithObjects:(id)firstObj, ...;</span><br></pre></td></tr></table></figure></p>
+<p>唯一的不同就是返回类型。新的返回类型提示编译器返回类型是方法被调用的类的实例。所以当arrayWithObjects:被调用的是NSArray时，返回类型是NSArray<em>。当调用的是MyArray时，返回类型是MyArray</em>。</p>
+<p>当维护成功子类化的能力的时候，用id就会出现的问题。如果用Xcode5编译原始的代码，你会看到下面的警告：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">warning: incompatible pointer types initializing <span class="string">'NSDictionary *'</span> with an expression of <span class="built_in">type</span> <span class="string">'NSArray *'</span> [-Wincompatible-pointer-types]   </span><br><span class="line">NSDictionary *d = [NSArray arrayWithObjects:@(<span class="number">1</span>), @(<span class="number">2</span>), nil];</span><br></pre></td></tr></table></figure></p>
+<p>那是有帮助的，现在你有机会修改这个问题以防止接下来crash。</p>
+<p>初始化方法是候选要使用这个新的返回类型的。现在如果你设置初始化方法返回一个不完整的类型编译器已经提醒你了。但是他可能隐式的转化id到instancetype。你应该仍然使用instancetype，因为明确一点还是比较好的。</p>
+<p>尽可能多的使用instancetype，他会成为Apple的标准-你不会知道这个将减少你多少你将来的degugging的痛苦时间。</p>
+<h2 id="3-新的_Foundations">3.新的 Foundations</h2><p>接下来就是Objective-C核心开发框架Foundation的一些新东西。没有Foundation很难开发Objective-C应用，所有的iOS Apps都需要使用。在新的iOS SDK中看看这些新添加的内容。</p>
+<p>Foundation最主要的提升是网络。(说的应该是NSURLSession)在iOS 7 by Tutorials 有一整章描述。（略）</p>
+<p>文章剩下部分展示了Foundation新增加的和改变的东西。</p>
+<h3 id="3-1_NSArray">3.1 NSArray</h3><p>尝试在NSArray实例中访问一个Object,如果下表越界将爆出异常。当你用数组当做队列的时候，你可能经常要访问数组中第一个或者最后一个元素。 在先进先出队列（FIFO）你可能要从数组的前端POP元素，如果是先进后出队列（FILO）就要从数组末尾POP元素。</p>
+<p>然而，当你访问数组的第一个或者最后一个元素的时候，你一定要确定没有超出数组的边界，如果数组是空得话经常发生这样的访问。这就会导致在调用objectAtIndex:不报错而产生冗余的代码，就像下面的这样：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">NSMutableArray *queue = [NSMutableArray new];   </span><br><span class="line">// ...   </span><br><span class="line"><span class="keyword">if</span> (queue.count &gt; <span class="number">0</span>) &#123;   </span><br><span class="line">    id firstObject = [queue objectAtIndex:<span class="number">0</span>];   </span><br><span class="line">    // Use firstObject   </span><br><span class="line">&#125;   </span><br><span class="line">// ...   </span><br><span class="line"><span class="keyword">if</span> (queue.count &gt; <span class="number">0</span>) &#123;   </span><br><span class="line">    id lastObject = [queue objectAtIndex:(queue.count - <span class="number">1</span>)];   </span><br><span class="line">    // Use lastObject   </span><br><span class="line">&#125;   </span><br><span class="line">``` </span><br><span class="line">要访问最后一个元素，你应该会用到NSArray的这个方法：</span><br><span class="line">```Bash</span><br><span class="line">- (id)lastObject;</span><br></pre></td></tr></table></figure></p>
+<p>Objective-C开发者应该可以高兴了，现在他们有了一个方法来访问数组的第一个元素：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- (id)firstObject;</span><br></pre></td></tr></table></figure></p>
+<p>简单的方法总是被证明是有用的。你不在需要检查数组是不是空的啦。你可能曾经遇到过由于越界产生的Crash。你可以看看下面的注意事项：</p>
+<p><span style="color:red">注意事项：如果你仔细的看NSArray头文件，其实firstObject在iOS4.0就已经出现啦，直到iOS7才对外开放。因此你可以在iOS7之前获取这个方法，但是你必须在你自己的头文件里声明这个方法firstObject来告诉编译器它确实存在。这不是一个提倡的方法，好歹Apple把这个方法公开了。</span></p>
+<p>先前的代码可以用这两个方法重写，就不用检查数组长度了，如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">NSMutableArray *queue = [NSMutableArray new];   </span><br><span class="line">// ...   </span><br><span class="line">id firstObject = [queue firstObject];   </span><br><span class="line">// Use firstObject   </span><br><span class="line">id lastObject = [queue lastObject];   </span><br><span class="line">// Use lastObject</span><br></pre></td></tr></table></figure></p>
+<h2 id="3-2_NSData">3.2 NSData</h2><p>Data是你编程处理最多的事情。NSData是Foundation类，封装了原始字节并提供方法操纵这些字节，可以从一个文件读或者写数据。但是一个简单的任务Base64编码和解码还没有原生的实现。直到iOS7才出现。</p>
+<p>Base64是一组二进制到文本转换的方案，以ASCII格式提供二进制数据。这些方案用来编码二进制数据以存储或者通过把多媒体文件转换成文本数据进行传输。这个能保证数据在传输过程中的完整性。Base64编码的最常见的用途是处理电子邮件附件，或者编码小图片，这些小图片是通过基于Web的API返回的JSON相应的一部分。</p>
+<p>在iOS7之前，Base64的 编码和解码是需要自己实现的或者使用第三方库。典型的Apple风格，现在是非常容易的使用这个功能。有四个Base64方法如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">- (id)initWithBase64EncodedString:(NSString *)base64String    </span><br><span class="line">      options:(NSDataBase64DecodingOptions)options;   </span><br><span class="line">   </span><br><span class="line">- (NSString *)base64EncodedStringWithOptions:   </span><br><span class="line">      (NSDataBase64EncodingOptions)options;   </span><br><span class="line">    </span><br><span class="line">- (id)initWithBase64EncodedData:(NSData *)base64Data    </span><br><span class="line">      options:(NSDataBase64DecodingOptions)options;   </span><br><span class="line">    </span><br><span class="line">- (NSData *)base64EncodedDataWithOptions:   </span><br><span class="line">      (NSDataBase64EncodingOptions)options;</span><br></pre></td></tr></table></figure></p>
+<p>头两个方法是处理字符串的，后两个方法是处理UTF-8编码数据的。这两个成对的方法功能是一样的，但是有时候用其中一个比另一个效率要高。如果你想要Base64编码字符串然后写进文件，你应该使用UTF-8编码数据的这对方法。另一方面，如果你打算Base64编码字符串然后用做JSON，你应该使用另外一对方法。如果你曾经实现过Base64编码方法，现在可以删除了，因为Apple已经帮你实现了。</p>
+<h2 id="3-3_NSTimer">3.3 NSTimer</h2><p>NSTimers在apps中经常用来执行周期性任务。NSTimer虽然很有用但是也会产生问题。当有几个定时器在用的时候，他们可能间断性的触发。这就是意味着CPU是间断性处于活动状态的。这样做是更加有效率的，当CPU换起的时候执行一些任务，然后进入睡眠状态。为了解决这个问题，Apple给NSTimer添加了一个容忍属性来适应这种行为。</p>
+<p>容忍提供系统一个指导在timer在计划之后允许延迟多长时间。为了减少CPU负荷底层系统将要集合这些活动。新属性的方法是：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- (NSTimeInterval)tolerance;   </span><br><span class="line">- (void)<span class="built_in">set</span>Tolerance:(NSTimeInterval)tolerance;</span><br></pre></td></tr></table></figure></p>
+<p>你可能永远都不需要用到这个属性，但是当你在非常密切相近的触发了几个定时器，你可能发现他是有用的，当你在用Instruments检测CPU使用率的时候。</p>
+<h2 id="3-3_NSProgress">3.3 NSProgress</h2><p>不经常见到Foundation会完整的添加一个新类。他是一个稳定的框架。主要是因为不经常用到核心的类。然而iOS7提供了一个完整的新类NSProgress。</p>
+<p>本质上，NSProgress是用来通过Objective-C代码产生进度报告的，分离每一个独立模块的进度。例如，你可以在一些数据上执行几个不同的任务，然后每个任务可以管理他自己的进度然后报告给他的父任务。</p>
+<h3 id="3-3-1NSProgress结构">3.3.1NSProgress结构</h3><p>NSProgress最简单的使用方法是报告一些任务集合的进度。例如，你有10个任务执行，当每个任务完成的时候你可以报告进度。当有一个任务完成的时候进度增加%10。然后在NSProgress的实例上使用Key Value Observing（KVO），你能够了解到这个实例的进度。你可以使用这个通知来更新进度条或者显示一个指示文字。</p>
+<p>NSProgress有更多的用途。Apple通过这个父子类的关系结构使他更加强大。NSProgress的结构更像是网状树。每一个NSProgress有一个父类和多个子类。每一个实例有一个执行的工作单元的总数，当前任务会处理完成的子任务数的更新来反馈当前状态。这么做的话，父类也会被通知进度。</p>
+<p>为了减少NSProgress实例的传递，每个线程有自己的NSProgress实例然后子实例可以直接从这个实例创建。没有这个功能，每个想要报告进度的任务不得不通过参数的方式来通知。</p>
+<h3 id="3-3-2报告进度">3.3.2报告进度</h3><p>NSProgress使用非常简单。以下面的方法开始：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">+(NSProgress *)progressWithTotalUnitCount:(int64_t)unitCount;</span><br></pre></td></tr></table></figure></p>
+<p>这个方法创建了一个NSProgress实例作为当前实例的子类，以要执行的任务单元总数来初始化。例如，如果任务是循环一个数组，然后你可能用数组数来初始化NSProgress实例。例如：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">NSArray*array = /* ... */;   </span><br><span class="line">    </span><br><span class="line">NSProgress*progress =   </span><br><span class="line">    [NSProgressprogressWithTotalUnitCount:array.count];   </span><br><span class="line">    </span><br><span class="line">[arrayenumerateObjectsUsingBlock:   </span><br><span class="line">    ^(id obj, NSUInteger idx, BOOL *stop) &#123;   </span><br><span class="line">        // Perform an expensive operation onobj   </span><br><span class="line">        progress.completedUnitCount = idx;   </span><br><span class="line">    &#125;];</span><br></pre></td></tr></table></figure></p>
+<p>随着迭代的进行，上面的代码会更新NSProgress实例来反映当前进度。</p>
+<h3 id="3-3-3接收进度更新">3.3.3接收进度更新</h3><p>你可以通过下面的属性在任何时候获取任务进度：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@property(<span class="built_in">readonly</span>) double fractionCompleted;</span><br></pre></td></tr></table></figure></p>
+<p>返回值是0到1，显示了任务的整体进度。当没有子实例的话，fractionCompleted就是简单的完成任务数除以总得任务数。</p>
+<p>Key Value Observing（KVO）是最好的方法来获取fractionCompleted值得变化。这么做非常简单。你只需要做的是添加一个NSProgress的fractionCompleted属性的观察者。像下面这样：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[_progressaddObserver:self   </span><br><span class="line">           <span class="keyword">for</span>KeyPath:@<span class="string">"fractionCompleted"</span>   </span><br><span class="line">              options:NSKeyValueObservingOptionNew   </span><br><span class="line">               context:NULL];</span><br></pre></td></tr></table></figure></p>
+<p> 然后覆盖KVO的这个方法来获取改变:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">-(void)observeValueForKeyPath:(NSString *)keyPath   </span><br><span class="line">                      ofObject:(id)object   </span><br><span class="line">                        change:(NSDictionary*)change   </span><br><span class="line">                       context:(void *)context   </span><br><span class="line">&#123;   </span><br><span class="line">    <span class="keyword">if</span> (object == _progress) &#123;   </span><br><span class="line">        // Handle new fractionCompleted value   </span><br><span class="line">        <span class="built_in">return</span>;   </span><br><span class="line">    &#125;   </span><br><span class="line">    </span><br><span class="line">    // Always call super, incase it uses KVOalso   </span><br><span class="line">    [super observeValueForKeyPath:keyPath   </span><br><span class="line">                         ofObject:object   </span><br><span class="line">                           change:change   </span><br><span class="line">                          context:context];   </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>在这个方法中你可以获取fractionCompleted的值的改变。例如你可能改变进度条或者提示文字。</p>
+<p>当然，当你处理完的时候记得注销KVO是很重要的。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[_progressremoveObserver:self   </span><br><span class="line">              <span class="keyword">for</span>KeyPath:@<span class="string">"fractionCompleted"</span>   </span><br><span class="line">                  context:NULL];</span><br></pre></td></tr></table></figure></p>
+<p>你必须总是要注销的，如果你没有注销，当被注册的Object释放的时候就会Crash。所以如果必要的话在dealloc中注销作为最后的保障。</p>
+<h2 id="4-WhereTo_Go_From_Here（以后该怎么办）">4.WhereTo Go From Here（以后该怎么办）</h2><pre><code><span class="list">(<span class="keyword">略）</span></span>
+</code></pre><h2 id="5-原文链接和参考链接">5.原文链接和参考链接</h2><p>原文链接：<a href="http://www.raywenderlich.com/49850/whats-new-in-objective-c-and-foundation-in-ios-7" target="_blank" rel="external">http://www.raywenderlich.com/49850/whats-new-in-objective-c-and-foundation-in-ios-7</a><br><a href="http://www.cocoachina.com/ios/20140508/8356.html" target="_blank" rel="external">http://www.cocoachina.com/ios/20140508/8356.html</a><br>参考链接：<br><a href="http://www.onevcat.com/2013/06/new-in-xcode5-and-objc/" target="_blank" rel="external">http://www.onevcat.com/2013/06/new-in-xcode5-and-objc/</a><br><a href="http://www.longyiqi.com/blog/programming-languages/2012/04/05/at-import-objc/" target="_blank" rel="external">http://www.longyiqi.com/blog/programming-languages/2012/04/05/at-import-objc/</a></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/05/27/motto/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          格言
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/05/24/hexo-not-found/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">-bash:hexo:command not found</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="OC-foundation" data-title="iOS7中Objective-C和Foundation的新特性" data-url="http://yoursite.com/2015/05/27/OC-foundation/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"tedmorecomment"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+</div>
+      <footer id="footer">
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2015 Ted Chen Visits <span id="busuanzi_value_site_pv"></span> Visitors <span id="busuanzi_value_site_uv"></span>
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/mobile.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+<! -- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+  </div>
+</body>
+</html>
