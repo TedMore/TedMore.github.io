@@ -1,11 +1,90 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
+<!doctype html>
+
+
+
   
-  <title>iOS面试题 | Ted Chen&#39;s blog</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一个区分度很大的面试题考察一个面试者基础咋样，基本上问一个 @property 就够了：
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="iOS,面试题," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="一个区分度很大的面试题考察一个面试者基础咋样，基本上问一个 @property 就够了：
 @property 后面可以有哪些修饰符？
 线程安全的:
 atomic,nonatomic
@@ -28,7 +107,7 @@ setter">
 <meta property="og:type" content="article">
 <meta property="og:title" content="iOS面试题">
 <meta property="og:url" content="http://yoursite.com/2015/07/19/iOS-Interview/index.html">
-<meta property="og:site_name" content="Ted Chen's blog">
+<meta property="og:site_name" content="孟涛的技术博客">
 <meta property="og:description" content="一个区分度很大的面试题考察一个面试者基础咋样，基本上问一个 @property 就够了：
 @property 后面可以有哪些修饰符？
 线程安全的:
@@ -51,7 +130,7 @@ assign,retain,copy
 setter">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/321489-7e0c763ec5333106.png">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/321489-07bc9169c8d3b8cf.png">
-<meta property="og:updated_time" content="2015-07-19T14:39:38.000Z">
+<meta property="og:updated_time" content="2016-06-01T14:24:46.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS面试题">
 <meta name="twitter:description" content="一个区分度很大的面试题考察一个面试者基础咋样，基本上问一个 @property 就够了：
@@ -74,233 +153,233 @@ assign,retain,copy
 
 指定方法名称
 setter">
-  
-    <link rel="alternative" href="/atom.xml" title="Ted Chen&#39;s blog" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  <link rel="stylesheet" href="/css/style.css" type="text/css">
-  <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> iOS面试题 | 孟涛的技术博客 </title>
 </head>
-<body>
-  <div id="container">
-    <div class="left-col">
-    <div class="overlay"></div>
-<div class="intrude-less">
-	<header id="header" class="inner">
-		<a href="/" class="profilepic">
-			<img lazy-src="http://tp3.sinaimg.cn/1503812550/180/5742227485/1" class="js-avatar">
-		</a>
 
-		<hgroup>
-		  <h1 class="header-author"><a href="/">Ted Chen</a></h1>
-		</hgroup>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
-		
-		<p class="header-subtitle">时间不老，我们不散</p>
-		
+  
 
-		
-			<div class="switch-btn">
-				<div class="icon">
-					<div class="icon-ctn">
-						<div class="icon-wrap icon-house" data-idx="0">
-							<div class="birdhouse"></div>
-							<div class="birdhouse_holes"></div>
-						</div>
-						<div class="icon-wrap icon-ribbon hide" data-idx="1">
-							<div class="ribbon"></div>
-						</div>
-						
-						<div class="icon-wrap icon-link hide" data-idx="2">
-							<div class="loopback_l"></div>
-							<div class="loopback_r"></div>
-						</div>
-						
-						
-						<div class="icon-wrap icon-me hide" data-idx="3">
-							<div class="user"></div>
-							<div class="shoulder"></div>
-						</div>
-						
-					</div>
-					
-				</div>
-				<div class="tips-box hide">
-					<div class="tips-arrow"></div>
-					<ul class="tips-inner">
-						<li>菜单</li>
-						<li>标签</li>
-						
-						<li>友情链接</li>
-						
-						
-						<li>关于我</li>
-						
-					</ul>
-				</div>
-			</div>
-		
 
-		<div class="switch-area">
-			<div class="switch-wrap">
-				<section class="switch-part switch-part1">
-					<nav class="header-menu">
-						<ul>
-						
-							<li><a href="/">主页</a></li>
-				        
-							<li><a href="/archives">所有文章</a></li>
-				        
-							<li><a href="/tags/随笔">随笔</a></li>
-				        
-						</ul>
-					</nav>
-					<nav class="header-nav">
-						<div class="social">
-							
-								<a class="github" target="_blank" href="https://github.com/TedMore" title="github">github</a>
-					        
-								<a class="weibo" target="_blank" href="http://weibo.com/1503812550" title="weibo">weibo</a>
-					        
-								<a class="mail" target="_blank" href="mailto://chentao623tmc@126.com" title="mail">mail</a>
-					        
-								<a class="zhihu" target="_blank" href="http://www.zhihu.com/" title="zhihu">zhihu</a>
-					        
-						</div>
-					</nav>
-				</section>
-				
-				
-				<section class="switch-part switch-part2">
-					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Foundation/" style="font-size: 10px;">Foundation</a> <a href="/tags/Framework/" style="font-size: 10px;">Framework</a> <a href="/tags/Objective-C/" style="font-size: 13.33px;">Objective-C</a> <a href="/tags/Swift/" style="font-size: 10px;">Swift</a> <a href="/tags/code/" style="font-size: 10px;">code</a> <a href="/tags/hexo/" style="font-size: 16.67px;">hexo</a> <a href="/tags/iOS/" style="font-size: 20px;">iOS</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/杂谈/" style="font-size: 10px;">杂谈</a> <a href="/tags/解决方案/" style="font-size: 10px;">解决方案</a> <a href="/tags/随笔/" style="font-size: 13.33px;">随笔</a> <a href="/tags/面试题/" style="font-size: 10px;">面试题</a>
-					</div>
-				</section>
-				
-				
-				
-				<section class="switch-part switch-part3">
-					<div id="js-friends">
-					
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://dulingkang.github.io">Shawn Du</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://www.zybuluo.com/mdeditor">Markdown编辑器</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://coderq.com/">码农圈</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://wuchong.me/">The author&#39;s blog of Jacman</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://ibruce.info/">不如的博客</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://yangxiaolei.me/">Yangxiaolei&#39;s blog</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://lukang.me/">KangLu&#39;s Blog</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://haomwei.com/">屠城｜屠夫9441的博客</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.matrix67.com/blog/">Matrix67</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.cnblogs.com/1208/">1208博客</a>
-			        
-			        </div>
-				</section>
-				
 
-				
-				
-				<section class="switch-part switch-part4">
-				
-					<div id="js-aboutme">不喜欢分享的人不一定是最帅的，但喜欢分享的人一定是最帅的。</div>
-				</section>
-				
-			</div>
-		</div>
-	</header>				
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">孟涛的技术博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">记录学习的点滴</p>
 </div>
-    </div>
-    <div class="mid-col">
-      <nav id="mobile-nav">
-  	<div class="overlay">
-  		<div class="slider-trigger"></div>
-  		<h1 class="header-author js-mobile-header hide">Ted Chen</h1>
-  	</div>
-	<div class="intrude-less">
-		<header id="header" class="inner">
-			<div class="profilepic">
-				<img lazy-src="http://tp3.sinaimg.cn/1503812550/180/5742227485/1" class="js-avatar">
-			</div>
-			<hgroup>
-			  <h1 class="header-author">Ted Chen</h1>
-			</hgroup>
-			
-			<p class="header-subtitle">时间不老，我们不散</p>
-			
-			<nav class="header-menu">
-				<ul>
-				
-					<li><a href="/">主页</a></li>
-		        
-					<li><a href="/archives">所有文章</a></li>
-		        
-					<li><a href="/tags/随笔">随笔</a></li>
-		        
-		        <div class="clearfix"></div>
-				</ul>
-			</nav>
-			<nav class="header-nav">
-				<div class="social">
-					
-						<a class="github" target="_blank" href="https://github.com/TedMore" title="github">github</a>
-			        
-						<a class="weibo" target="_blank" href="http://weibo.com/1503812550" title="weibo">weibo</a>
-			        
-						<a class="mail" target="_blank" href="mailto://chentao623tmc@126.com" title="mail">mail</a>
-			        
-						<a class="zhihu" target="_blank" href="http://www.zhihu.com/" title="zhihu">zhihu</a>
-			        
-				</div>
-			</nav>
-		</header>				
-	</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
 </nav>
-      <div class="body-wrap"><article id="post-iOS-Interview" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/07/19/iOS-Interview/" class="article-date">
-  	<time datetime="2015-07-19T13:18:16.000Z" itemprop="datePublished">7月 19 2015</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
     
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
+
   
-    <h1 class="article-title" itemprop="name">
-      iOS面试题
-    </h1>
   
 
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                iOS面试题
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-07-19T21:18:16+08:00" content="Jul 19 2015">
+              Jul 19 2015
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Interview/" itemprop="url" rel="index">
+                    <span itemprop="name">Interview</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/07/19/iOS-Interview/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/19/iOS-Interview/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+
+
+
+
+
+          
+          
+
+          
+        </div>
       </header>
-      
-      <div class="article-info article-info-post">
-        
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面试题/">面试题</a></li></ul>
-	</div>
-
-        
-
-        <div class="clearfix"></div>
-      </div>
-      
     
-    <div class="article-entry" itemprop="articleBody">
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
       
         <h2 id="一个区分度很大的面试题">一个区分度很大的面试题</h2><p>考察一个面试者基础咋样，基本上问一个 @property 就够了：</p>
 <h3 id="@property_后面可以有哪些修饰符？">@property 后面可以有哪些修饰符？</h3><ul>
@@ -504,123 +583,353 @@ setter">
 
       
     </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/iOS/" rel="tag">#iOS</a>
+          
+            <a href="/tags/面试题/" rel="tag">#面试题</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/07/14/easy-code/" rel="next" title="漫画：如何编程？四步走，So easy！">
+                <i class="fa fa-chevron-left"></i> 漫画：如何编程？四步走，So easy！
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/08/20/lazy-iOS/" rel="prev" title="工程师的懒隋">
+                工程师的懒隋 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2015/07/19/iOS-Interview/"
+           data-title="iOS面试题" data-url="http://yoursite.com/2015/07/19/iOS-Interview/">
+      </div>
     
   </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2015/08/20/lazy-iOS/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
+
+
+        </div>
         
-          工程师的懒隋
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://tp3.sinaimg.cn/1503812550/180/5742227485/1"
+               alt="孟涛" />
+          <p class="site-author-name" itemprop="name">孟涛</p>
+          <p class="site-description motion-element" itemprop="description">再不疯狂，我们就老了</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">14</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/TedMore" target="_blank" title="github">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/u/1503812550/home?wvr=5" target="_blank" title="weibo">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.github.com" title="Github" target="_blank">Github</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一个区分度很大的面试题"><span class="nav-number">1.</span> <span class="nav-text">一个区分度很大的面试题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#@property_后面可以有哪些修饰符？"><span class="nav-number">1.1.</span> <span class="nav-text">@property 后面可以有哪些修饰符？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么情况使用_weak_关键字，相比_assign_有什么不同？比如:"><span class="nav-number">1.2.</span> <span class="nav-text">什么情况使用 weak 关键字，相比 assign 有什么不同？比如:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#怎么用_copy_关键字？"><span class="nav-number">1.3.</span> <span class="nav-text">怎么用 copy 关键字？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#这个写法会出什么问题：_@property_(copy)"><span class="nav-number">1.4.</span> <span class="nav-text">这个写法会出什么问题： @property (copy)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NSMutableArray_*array;"><span class="nav-number">1.5.</span> <span class="nav-text">NSMutableArray *array;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何让自己的类用_copy_修饰符？"><span class="nav-number">1.6.</span> <span class="nav-text">如何让自己的类用 copy 修饰符？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何重写带_copy_关键字的_setter？"><span class="nav-number">1.7.</span> <span class="nav-text">如何重写带 copy 关键字的 setter？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#这一套问题区分度比较大，如果上面的问题都能回答正确，可以延伸问更深入点的："><span class="nav-number">1.8.</span> <span class="nav-text">这一套问题区分度比较大，如果上面的问题都能回答正确，可以延伸问更深入点的：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#@property_的本质是什么？ivar、getter、setter_是如何生成并添加到这个类中的"><span class="nav-number">1.9.</span> <span class="nav-text">@property 的本质是什么？ivar、getter、setter 是如何生成并添加到这个类中的</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#@protocol_和_category_中如何使用_@property"><span class="nav-number">1.10.</span> <span class="nav-text">@protocol 和 category 中如何使用 @property</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#runtime_如何实现_weak_属性"><span class="nav-number">1.11.</span> <span class="nav-text">runtime 如何实现 weak 属性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Checklist"><span class="nav-number">2.</span> <span class="nav-text">Checklist</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#[※]@property中有哪些属性关键字？"><span class="nav-number">2.1.</span> <span class="nav-text">[※]@property中有哪些属性关键字？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#[※]weak属性需要在dealloc中置nil么？"><span class="nav-number">2.2.</span> <span class="nav-text">[※]weak属性需要在dealloc中置nil么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#[※※]@synthesize和@dynamic分别有什么作用？"><span class="nav-number">2.3.</span> <span class="nav-text">[※※]@synthesize和@dynamic分别有什么作用？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#[※※※]ARC下，不显示指定任何属性关键字时，默认的关键字都有哪些？"><span class="nav-number">2.4.</span> <span class="nav-text">[※※※]ARC下，不显示指定任何属性关键字时，默认的关键字都有哪些？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#[※※※]用@property声明的NSString（或NSArray，NSDictionary）经常使用copy关键字，为什么？如果改用strong关键字，可能造成什么问题？"><span class="nav-number">2.5.</span> <span class="nav-text">[※※※]用@property声明的NSString（或NSArray，NSDictionary）经常使用copy关键字，为什么？如果改用strong关键字，可能造成什么问题？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#[※※※]@synthesize合成实例变量的规则是什么？假如property名为foo，存在一个名为_foo的实例变量，那么还会自动合成新变量么？"><span class="nav-number">2.6.</span> <span class="nav-text">[※※※]@synthesize合成实例变量的规则是什么？假如property名为foo，存在一个名为_foo的实例变量，那么还会自动合成新变量么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#[※※※※※]在有了自动合成属性实例变量之后，@synthesize还有哪些使用场景？"><span class="nav-number">2.7.</span> <span class="nav-text">[※※※※※]在有了自动合成属性实例变量之后，@synthesize还有哪些使用场景？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#[※※]objc中向一个nil对象发送消息将会发生什么？"><span class="nav-number">2.8.</span> <span class="nav-text">[※※]objc中向一个nil对象发送消息将会发生什么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#[※※※]objc中向一个对象发送消息[obj_foo]和objc_msgSend()函数之间有什么关系？"><span class="nav-number">2.9.</span> <span class="nav-text">[※※※]objc中向一个对象发送消息[obj foo]和objc_msgSend()函数之间有什么关系？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#[※※※]什么时候会报unrecognized_selector的异常？"><span class="nav-number">2.10.</span> <span class="nav-text">[※※※]什么时候会报unrecognized selector的异常？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#[※※※※]一个objc对象如何进行内存布局？（考虑有父类的情况）"><span class="nav-number">2.11.</span> <span class="nav-text">[※※※※]一个objc对象如何进行内存布局？（考虑有父类的情况）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#[※※※※]一个objc对象的isa的指针指向什么？有什么作用？"><span class="nav-number">2.12.</span> <span class="nav-text">[※※※※]一个objc对象的isa的指针指向什么？有什么作用？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#[※※※※]下面的代码输出什么？"><span class="nav-number">2.13.</span> <span class="nav-text">[※※※※]下面的代码输出什么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#[※※※※]runtime如何通过selector找到对应的IMP地址？（分别考虑类方法和实例方法）"><span class="nav-number">2.14.</span> <span class="nav-text">[※※※※]runtime如何通过selector找到对应的IMP地址？（分别考虑类方法和实例方法）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#[※※※※]使用runtime_Associate方法关联的对象，需要在主对象dealloc的时候释放么？"><span class="nav-number">2.15.</span> <span class="nav-text">[※※※※]使用runtime Associate方法关联的对象，需要在主对象dealloc的时候释放么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#[※※※※※]objc中的类方法和实例方法有什么本质区别和联系？"><span class="nav-number">2.16.</span> <span class="nav-text">[※※※※※]objc中的类方法和实例方法有什么本质区别和联系？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#[※※※※※]_objc_msgForward函数是做什么的，直接调用它将会发生什么？"><span class="nav-number">2.17.</span> <span class="nav-text">[※※※※※]_objc_msgForward函数是做什么的，直接调用它将会发生什么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#[※※※※※]runtime如何实现weak变量的自动置nil？"><span class="nav-number">2.18.</span> <span class="nav-text">[※※※※※]runtime如何实现weak变量的自动置nil？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#[※※※※※]能否向编译后得到的类中增加实例变量？能否向运行时创建的类中添加实例变量？为什么？"><span class="nav-number">2.19.</span> <span class="nav-text">[※※※※※]能否向编译后得到的类中增加实例变量？能否向运行时创建的类中添加实例变量？为什么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#[※※※]runloop和线程有什么关系？"><span class="nav-number">2.20.</span> <span class="nav-text">[※※※]runloop和线程有什么关系？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#[※※※]runloop的mode作用是什么？"><span class="nav-number">2.21.</span> <span class="nav-text">[※※※]runloop的mode作用是什么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#[※※※※]以+_scheduledTimerWithTimeInterval…的方式触发的timer，在滑动页面上的列表时，timer会暂定回调，为什么？如何解决？"><span class="nav-number">2.22.</span> <span class="nav-text">[※※※※]以+ scheduledTimerWithTimeInterval…的方式触发的timer，在滑动页面上的列表时，timer会暂定回调，为什么？如何解决？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#[※※※※※]猜想runloop内部是如何实现的？"><span class="nav-number">2.23.</span> <span class="nav-text">[※※※※※]猜想runloop内部是如何实现的？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#[※]objc使用什么机制管理对象内存？"><span class="nav-number">2.24.</span> <span class="nav-text">[※]objc使用什么机制管理对象内存？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#[※※※※]ARC通过什么方式帮助开发者管理内存？"><span class="nav-number">2.25.</span> <span class="nav-text">[※※※※]ARC通过什么方式帮助开发者管理内存？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#[※※※※]不手动指定autoreleasepool的前提下，一个autorealese对象在什么时刻释放？（比如在一个vc的viewDidLoad中创建）"><span class="nav-number">2.26.</span> <span class="nav-text">[※※※※]不手动指定autoreleasepool的前提下，一个autorealese对象在什么时刻释放？（比如在一个vc的viewDidLoad中创建）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#[※※※※]BAD_ACCESS在什么情况下出现？"><span class="nav-number">2.27.</span> <span class="nav-text">[※※※※]BAD_ACCESS在什么情况下出现？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#[※※※※※]苹果是如何实现autoreleasepool的？"><span class="nav-number">2.28.</span> <span class="nav-text">[※※※※※]苹果是如何实现autoreleasepool的？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#[※※]使用block时什么情况会发生引用循环，如何解决？"><span class="nav-number">2.29.</span> <span class="nav-text">[※※]使用block时什么情况会发生引用循环，如何解决？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#[※※]在block内如何修改block外部变量？"><span class="nav-number">2.30.</span> <span class="nav-text">[※※]在block内如何修改block外部变量？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#[※※※]使用系统的某些block_api（如UIView的block版本写动画时），是否也考虑引用循环问题？"><span class="nav-number">2.31.</span> <span class="nav-text">[※※※]使用系统的某些block api（如UIView的block版本写动画时），是否也考虑引用循环问题？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#[※※]GCD的队列（dispatch_queue_t）分哪两种类型？"><span class="nav-number">2.32.</span> <span class="nav-text">[※※]GCD的队列（dispatch_queue_t）分哪两种类型？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#[※※※※]如何用GCD同步若干个异步调用？（如根据若干个url异步加载多张图片，然后在都下载完成后合成一张整图）"><span class="nav-number">2.33.</span> <span class="nav-text">[※※※※]如何用GCD同步若干个异步调用？（如根据若干个url异步加载多张图片，然后在都下载完成后合成一张整图）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#[※※※※]dispatch_barrier_async的作用是什么？"><span class="nav-number">2.34.</span> <span class="nav-text">[※※※※]dispatch_barrier_async的作用是什么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#[※※※※※]苹果为什么要废弃dispatch_get_current_queue？"><span class="nav-number">2.35.</span> <span class="nav-text">[※※※※※]苹果为什么要废弃dispatch_get_current_queue？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#[※※※※※]以下代码运行结果如何？"><span class="nav-number">2.36.</span> <span class="nav-text">[※※※※※]以下代码运行结果如何？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#[※※]addObserver:forKeyPath:options:context:各个参数的作用分别是什么，observer中需要实现哪个方法才能获得KVO回调？"><span class="nav-number">2.37.</span> <span class="nav-text">[※※]addObserver:forKeyPath:options:context:各个参数的作用分别是什么，observer中需要实现哪个方法才能获得KVO回调？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#[※※※]如何手动触发一个value的KVO"><span class="nav-number">2.38.</span> <span class="nav-text">[※※※]如何手动触发一个value的KVO</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#[※※※]若一个类有实例变量NSString_*_foo，调用setValue:forKey:时，可以以foo还是_foo作为key？"><span class="nav-number">2.39.</span> <span class="nav-text">[※※※]若一个类有实例变量NSString *_foo，调用setValue:forKey:时，可以以foo还是_foo作为key？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#[※※※※]KVC的keyPath中的集合运算符如何使用？"><span class="nav-number">2.40.</span> <span class="nav-text">[※※※※]KVC的keyPath中的集合运算符如何使用？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#[※※※※]KVC和KVO的keyPath一定是属性么？"><span class="nav-number">2.41.</span> <span class="nav-text">[※※※※]KVC和KVO的keyPath一定是属性么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#[※※※※※]如何关闭默认的KVO的默认实现，并进入自定义的KVO实现？"><span class="nav-number">2.42.</span> <span class="nav-text">[※※※※※]如何关闭默认的KVO的默认实现，并进入自定义的KVO实现？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#[※※※※※]apple用什么方式实现对一个对象的KVO？"><span class="nav-number">2.43.</span> <span class="nav-text">[※※※※※]apple用什么方式实现对一个对象的KVO？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#[※※]IBOutlet连出来的视图属性为什么可以被设置成weak?"><span class="nav-number">2.44.</span> <span class="nav-text">[※※]IBOutlet连出来的视图属性为什么可以被设置成weak?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#[※※※※※]IB中User_Defined_Runtime_Attributes如何使用？"><span class="nav-number">2.45.</span> <span class="nav-text">[※※※※※]IB中User Defined Runtime Attributes如何使用？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#[※※※]如何调试BAD_ACCESS错误"><span class="nav-number">2.46.</span> <span class="nav-text">[※※※]如何调试BAD_ACCESS错误</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#[※※※]lldb（gdb）常用的调试命令？"><span class="nav-number">2.47.</span> <span class="nav-text">[※※※]lldb（gdb）常用的调试命令？</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
         
       </div>
-    </a>
-  
-  
-    <a href="/2015/07/14/easy-code/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">漫画：如何编程？四步走，So easy！</div>
-      <strong class="article-nav-caption">></strong>
-    </a>
-  
-</nav>
+    </main>
 
-  
-</article>
-
-
-<div class="share">
-	<!-- JiaThis Button BEGIN -->
-	<div class="jiathis_style">
-		<span class="jiathis_txt">分享到：</span>
-		<a class="jiathis_button_tsina"></a>
-		<a class="jiathis_button_cqq"></a>
-		<a class="jiathis_button_douban"></a>
-		<a class="jiathis_button_weixin"></a>
-		<a class="jiathis_button_tumblr"></a>
-		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
-	</div>
-	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
-	<!-- JiaThis Button END -->
-</div>
-
-
-
-<div class="duoshuo">
-	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="iOS-Interview" data-title="iOS面试题" data-url="http://yoursite.com/2015/07/19/iOS-Interview/"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"tedmorecomment"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-	<!-- 多说公共JS代码 end -->
-</div>
-
-
-
-</div>
-      <footer id="footer">
-<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
-  <div class="outer">
-    <div id="footer-info">
-    	<div class="footer-left">
-    		&copy; 2015 Ted Chen Visits <span id="busuanzi_value_site_pv"></span> Visitors <span id="busuanzi_value_site_uv"></span>
-    	</div>
-      	<div class="footer-right">
-      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
-      	</div>
+
+<div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">孟涛</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+
+<span id="busuanzi_container_site_pv">
+    |  本站总访问量<span id="busuanzi_value_site_pv"></span>次
+</span>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
     </div>
   </div>
-</footer>
-    </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
     
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
-  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+  
 
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"tedmorecomment"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
 
-<script src="/js/mobile.js" type="text/javascript"></script>
-<script src="/js/main.js" type="text/javascript"></script>
-
-
-
-
-
-<! -- mathjax config similar to math.stackexchange -->
-
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-        processEscapes: true,
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    }
-});
-
-MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';                 
-    }       
-});
-</script>
-
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
+  
+    
+  
 
 
 
-  </div>
+
+
+
+  
+  
+  
+
+  
+
+  
+
+
+
 </body>
 </html>
