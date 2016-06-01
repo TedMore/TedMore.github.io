@@ -1,0 +1,946 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="iOS," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="Swift语言至今诞生有一年多的时间了，已经成为当前最流行语言之一。虽然它的语法简单好用，但实际上Swift是一门非常复杂的语言。因为它不仅是面向对象的同时又是函数式编程语言。本文主要介绍Swift常见的一些面试问题，你可以用这些问题向面试者提问，也可以用来测试你自己目前所掌握的Swift知识，如果你不清楚问题答案的话也不用太担心，因为每个问题下面都有相应的答案。
+问题主要分为两个部分，笔试题和口">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Swif面试题">
+<meta property="og:url" content="http://yoursite.com/2016/01/17/Swif面试题/index.html">
+<meta property="og:site_name" content="孟涛的技术博客">
+<meta property="og:description" content="Swift语言至今诞生有一年多的时间了，已经成为当前最流行语言之一。虽然它的语法简单好用，但实际上Swift是一门非常复杂的语言。因为它不仅是面向对象的同时又是函数式编程语言。本文主要介绍Swift常见的一些面试问题，你可以用这些问题向面试者提问，也可以用来测试你自己目前所掌握的Swift知识，如果你不清楚问题答案的话也不用太担心，因为每个问题下面都有相应的答案。
+问题主要分为两个部分，笔试题和口">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1201822-25bf8951983ca708.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1201822-b5eacfdc495e7819.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1201822-2d6da5268dc60a17.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1201822-7bfce4c0e827ba0a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1201822-a000d49e3f1b2d6b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2016-06-01T23:37:16.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Swif面试题">
+<meta name="twitter:description" content="Swift语言至今诞生有一年多的时间了，已经成为当前最流行语言之一。虽然它的语法简单好用，但实际上Swift是一门非常复杂的语言。因为它不仅是面向对象的同时又是函数式编程语言。本文主要介绍Swift常见的一些面试问题，你可以用这些问题向面试者提问，也可以用来测试你自己目前所掌握的Swift知识，如果你不清楚问题答案的话也不用太担心，因为每个问题下面都有相应的答案。
+问题主要分为两个部分，笔试题和口">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> Swif面试题 | 孟涛的技术博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">孟涛的技术博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">记录学习的点滴</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Swif面试题
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-01-17T07:36:08+08:00" content="Jan 17 2016">
+              Jan 17 2016
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Swift/" itemprop="url" rel="index">
+                    <span itemprop="name">Swift</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/01/17/Swif面试题/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/17/Swif面试题/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+
+
+
+
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>Swift语言至今诞生有一年多的时间了，已经成为当前最流行语言之一。虽然它的语法简单好用，但实际上Swift是一门非常复杂的语言。因为它不仅是面向对象的同时又是函数式编程语言。本文主要介绍Swift常见的一些面试问题，你可以用这些问题向面试者提问，也可以用来测试你自己目前所掌握的Swift知识，如果你不清楚问题答案的话也不用太担心，因为每个问题下面都有相应的答案。</p>
+<p>问题主要分为两个部分，笔试题和口头问题。</p>
+<blockquote>
+<p><strong>笔试题</strong>：可以通过发送Email方式进行编程测试，问题可以包含一小段代码测试。<br><strong>口头问题</strong>：可以通过手机等方式进行面对面的交流，因为这些问题更适合用语言进行交流。</p>
+</blockquote>
+<p>而且每个部分又分为三个等级：</p>
+<blockquote>
+<p><strong>初级</strong>：适用于刚接触Swift的学习者，已经读过一本或者两本Swift相关书籍，开始准备在App中使用Swift语言。<br><strong>中级</strong>：适用于对Swift语言概念非常感兴趣的学习者，已经读过许多Swift博客文章并且想进一步深入学习Swift语言。<br><strong>高级</strong>：适用于高级学者，已经对Swift语言很熟悉，喜欢探寻语言，想进一步挑战自我，喜欢高级技术者。</p>
+</blockquote>
+<p>如果你想知道这些问题的答案，建议你最好打开Playground，亲自实现编码。下面这些问题的答案都在Xcode 7.0 beta 6上测试过。</p>
+<h1 id="笔试题">笔试题</h1><h2 id="初级">初级</h2><p>你好，现在开始基础测试。<br><strong>问题 #1 - Swift1.0或者更高版本</strong><br>用下面方法写一个for循环是最好的方法吗？<br><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> <span class="reserved">var</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++ &#123;</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">"Hello!"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>答案</strong>:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> _ <span class="keyword">in</span> <span class="number">0</span>...<span class="number">4</span> &#123;</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">"Hello!"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>Swift实现了两种范围操作符，分别为闭区间操作符和半开区间操作符。前者包括范围内的所有元素。例如下面例子包含了0到4所有元素。<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0..<span class="class">.4</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>而半开区间操作符不会包括最后一个元素。下面的例子同样包括了0到4所有元素<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0..&lt;5</span><br></pre></td></tr></table></figure></p>
+<p><strong>问题 #2 - Swift1.0或者更高版本</strong><br>考虑以下这段代码<br><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">struct Tutorial &#123;</span><br><span class="line">  <span class="variable"><span class="keyword">var</span> difficulty</span>: <span class="typename">Int</span> = <span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="variable"><span class="keyword">var</span> tutorial1</span> = Tutorial()</span><br><span class="line"><span class="variable"><span class="keyword">var</span> tutorial2</span> = tutorial1</span><br><span class="line">tutorial2.difficulty = <span class="number">2</span></span><br></pre></td></tr></table></figure></p>
+<p> tutorial1.difficulty和tutorial2.difficulty的值有什么不同，如果Tutorial是一个类，又有什么不同？为什么？<br><strong>答案</strong>：</p>
+<blockquote>
+<p>tutorial1.difficulty的值是1，而tutorial2.difficulty的值是2<br>在Swift中，结构体是值类型而不是引用类型，它是值copy。<br>下面这行代码会首先创建一份tutorial1的copy，然后再赋值给tutorial2<br><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable"><span class="keyword">var</span> tutorial2</span> = tutorial1</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>从这行代码可以看出，tutorial2 的变化不会影响tutorial1<br>如果Tutorial是一个类，tutorial1.difficulty和tutorial2.difficulty的值都是2。<br>在Swift中，类是引用类型，tutorial1的变化会影响到tutorial2，反之亦然。</p>
+<p><strong>问题 #3 - Swift1.0或者更高版本</strong><br>用var声明view1和用let声明view2，在下面的例子中有什么不同？，最后一行Code能否编译通过？<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">import UIKit</span><br><span class="line"> </span><br><span class="line"><span class="tag">var</span> view1 = <span class="function"><span class="title">UIView</span><span class="params">()</span></span></span><br><span class="line">view1<span class="class">.alpha</span> = <span class="number">0.5</span></span><br><span class="line"> </span><br><span class="line">let view2 = <span class="function"><span class="title">UIView</span><span class="params">()</span></span></span><br><span class="line">view2<span class="class">.alpha</span> = <span class="number">0.5</span> <span class="comment">// Will this line compile?</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>答案</strong>：</p>
+<blockquote>
+<p>因为view1是一个变量，所以可以用UIView的实例进行赋值，用let关键字只能赋值一次，所以下面代码不能编译成功。<br><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">view2 = view1 <span class="comment">// 错误：view2是不可变的</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>但是，UIView是基于类引用的，所以view2的属性是可以改变的（最后一行代码可以编译通过）<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let view2 = <span class="function"><span class="title">UIView</span><span class="params">()</span></span></span><br><span class="line">view2<span class="class">.alpha</span> = <span class="number">0.5</span> <span class="comment">// Yes!</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>问题 #4 - Swift1.0或者更高版本</strong><br>下面Code是把数组按字母顺序进行排序，看起来有些复杂，你能用闭包简化它吗？<br><figure class="highlight julia"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> animals = [<span class="string">"fish"</span>, <span class="string">"cat"</span>, <span class="string">"chicken"</span>, <span class="string">"dog"</span>]</span><br><span class="line"><span class="keyword">let</span> sortedAnimals = animals.sort &#123; (one: <span class="built_in">String</span>, two: <span class="built_in">String</span>) -&gt; <span class="built_in">Bool</span> <span class="keyword">in</span></span><br><span class="line">  <span class="keyword">return</span> one &lt; two</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>答案</strong>：</p>
+<blockquote>
+<p>首先是可以简化闭包的参数，因为在闭包中，系统是可以通过类型推断方式推算出参数的类型。所以你可以去掉参数的类型：<br><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let sortedAnimals = animals.<span class="built_in">sort</span> &#123; (<span class="constant">one</span>, <span class="constant">two</span>) -&gt; Bool <span class="operator">in</span> <span class="constant">return</span> <span class="constant">one</span> &lt; <span class="constant">two</span> &#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>返回类型也可以推算出来，所以可以去掉闭包的返回类型：<br><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let sortedAnimals = animals.<span class="built_in">sort</span> &#123; (<span class="constant">one</span>, <span class="constant">two</span>) <span class="operator">in</span> <span class="constant">return</span> <span class="constant">one</span> &lt; <span class="constant">two</span> &#125;</span><br></pre></td></tr></table></figure></p>
+<p>可以用$i符号替换掉参数的名字，代码然后就变成这样：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> sortedAnimals = animals.sort &#123; <span class="built_in">return</span> <span class="variable">$0</span> &lt; <span class="variable">$1</span> &#125;</span><br></pre></td></tr></table></figure></p>
+<p>在单语句的闭包中，关键字return也可以省略。最后一条语句的返回值就变成闭包的返回值：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> sortedAnimals = animals.sort &#123; <span class="variable">$0</span> &lt; <span class="variable">$1</span> &#125;</span><br></pre></td></tr></table></figure></p>
+<p>Oops, 到目前，是不是非常简单了，但实际上并非如此。<br>对字符串来说，有一个字符串比较函数，定义如下：<br><figure class="highlight julia"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">func &lt;(lhs: <span class="built_in">String</span>, rhs: <span class="built_in">String</span>) -&gt; <span class="built_in">Bool</span></span><br></pre></td></tr></table></figure></p>
+<p>使用这个函数可以让你的Code更加简洁, 如下：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let sortedAnimals = animals.<span class="function"><span class="title">sort</span><span class="params">(&lt;)</span></span></span><br></pre></td></tr></table></figure></p>
+<p><strong>注意</strong>：以上每一步的代码编译运行后都会输出同样的结果，你可以选择使用单字节的闭包。</p>
+<p><strong>问题 #5 - Swift1.0或者更高版本</strong><br>下面代码定义<em>Address</em>和<em>Person</em>两个类，创建Ray和Brian两个实例。<br><figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">class Address &#123;</span><br><span class="line">  var fullAddress: String</span><br><span class="line">  var city: String</span><br><span class="line"> </span><br><span class="line">  init(fullAddress: String, city: String) &#123;</span><br><span class="line">    self.fullAddress = fullAddress</span><br><span class="line">    self.city = city</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">class <span class="keyword">Person</span> &#123;</span><br><span class="line">  var name: String</span><br><span class="line">  var address: Address</span><br><span class="line"> </span><br><span class="line">  init(name: String, address: Address) &#123;</span><br><span class="line">    self.name = name</span><br><span class="line">    self.address = address</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">var headquarters = Address(fullAddress: <span class="string">"123 Tutorial Street"</span>, city: <span class="string">"Appletown"</span>)</span><br><span class="line">var ray = <span class="keyword">Person</span>(name: <span class="string">"Ray"</span>, address: headquarters)</span><br><span class="line">var brian = <span class="keyword">Person</span>(name: <span class="string">"Brian"</span>, address: headquarters)</span><br></pre></td></tr></table></figure></p>
+<p>假如Brian要搬迁到新的地址居住，所以你会这样更新他的住址：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brian<span class="class">.address</span><span class="class">.fullAddress</span> = <span class="string">"148 Tutorial Street"</span></span><br></pre></td></tr></table></figure></p>
+<p>这样做的话会发生什么？错在哪个地方？<br><img src="http://upload-images.jianshu.io/upload_images/1201822-25bf8951983ca708.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="I know it"><br><strong>答案</strong>：</p>
+<blockquote>
+<p>Ray也会更新地址。因为类Address是引用类型，headquarters是同一个实例，不论你是修改ray的地址还是brian的地址，都会改变headquarters地址。<br><strong>解决方法是为brian新创建一个地址。或者声明Address为结构体而不是类。</strong></p>
+</blockquote>
+<h2 id="中级">中级</h2><p>下面提升一下难度的等级<br><strong>问题 #1 - Swift2.0或者更高版本</strong><br>思考一下以下代码:<br><figure class="highlight delphi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> optional1: <span class="keyword">String</span>? = <span class="keyword">nil</span></span><br><span class="line"><span class="keyword">var</span> optional2: <span class="keyword">String</span>? = .None</span><br></pre></td></tr></table></figure></p>
+<p><strong>nil</strong>和<strong>.None</strong>有什么不同？变量optional1和optional2有什么不同？<br><strong>答案</strong>:</p>
+<blockquote>
+<p><strong>nil</strong>和<strong>.None</strong>是一样的。当可选变量没有值时，Optional.None（.None for short）是一般初始化可选变量的方式，而nil则是另一种写法。<br>事实上，下面条件语句输出是true：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nil == <span class="class">.None</span> <span class="comment">// On Swift 1.x this doesn't compile. You need Optional&lt;Int&gt;.None</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>记着下面代码说明enumeration是一个可选类型：<br><figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">enum</span> <span class="type">Optional</span>&lt;T&gt; &#123;</span><br><span class="line">  <span class="keyword">case</span> <span class="type">None</span></span><br><span class="line">  <span class="keyword">case</span> Some(T)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>问题 #2 - Swift1.0或者更高版本</strong><br>下面是用类和结构体实现温度计的例子：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">public <span class="class"><span class="keyword">class</span> <span class="title">ThermometerClass</span> </span>&#123;</span><br><span class="line">  private(<span class="keyword">set</span>) <span class="keyword">var</span> temperature: <span class="type">Double</span> = <span class="number">0.0</span></span><br><span class="line">  public <span class="func"><span class="keyword">func</span> <span class="title">registerTemperature</span><span class="params">(temperature: Double)</span></span> &#123;</span><br><span class="line">    <span class="keyword">self</span>.temperature = temperature</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">let</span> thermometerClass = <span class="type">ThermometerClass</span>()</span><br><span class="line">thermometerClass.registerTemperature(<span class="number">56.0</span>)</span><br><span class="line"> </span><br><span class="line">public <span class="class"><span class="keyword">struct</span> <span class="title">ThermometerStruct</span> </span>&#123;</span><br><span class="line">  private(<span class="keyword">set</span>) <span class="keyword">var</span> temperature: <span class="type">Double</span> = <span class="number">0.0</span></span><br><span class="line">  public <span class="keyword">mutating</span> <span class="func"><span class="keyword">func</span> <span class="title">registerTemperature</span><span class="params">(temperature: Double)</span></span> &#123;</span><br><span class="line">    <span class="keyword">self</span>.temperature = temperature</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">let</span> thermometerStruct = <span class="type">ThermometerStruct</span>()</span><br><span class="line">thermometerStruct.registerTemperature(<span class="number">56.0</span>)</span><br></pre></td></tr></table></figure></p>
+<p>这段代码在哪个地方会出现编译错误？为什么？<br>小提示：在Playground测试之前，请仔细阅读并思考代码。<br><strong>答案</strong>:</p>
+<blockquote>
+<p>在最后一行编译器会提示错误，结构体ThermometerStruct声明一个可变的函数修改内部变量 temperature，但是registerTemperature却被一个用let创建的实例所调用，用let定义的变量是不可变的，所以编译通不过。<br>在结构体中，改变内部状态的方法必须用mutating声明，而且不允许用不可变的实例调用它。</p>
+</blockquote>
+<p><strong>问题 #3 - Swift1.0或者更高版本</strong><br>下面的代码打印输出是什么？为什么？<br><figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var <span class="keyword">thing</span> = <span class="string">"cars"</span></span><br><span class="line">let closure = &#123; <span class="comment">[thing]</span> in</span><br><span class="line">  print(<span class="string">"I love \(thing)"</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">thing</span> = <span class="string">"airplanes"</span></span><br><span class="line">closure()</span><br></pre></td></tr></table></figure></p>
+<p><strong>答案</strong>：</p>
+<blockquote>
+<p>结果会打印出“I love cars”。当声明闭包的时候，捕获列表会创建一份thing的copy，所以被捕获到的值是不会改变的，即使你改变thing的值。<br>如果你去掉闭包中的捕获列表，编译器会使用引用代替copy。在这种情况下，当闭包被调用时，变量的值是可以改变的。示例如下：<br><figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var <span class="keyword">thing</span> = <span class="string">"cars"</span></span><br><span class="line">let closure = &#123;    </span><br><span class="line">  print(<span class="string">"I love \(thing)"</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">thing</span> = <span class="string">"airplanes"</span></span><br><span class="line">closure() // Prints <span class="string">"I love airplanes"</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p><strong>问题 #4 - Swift2.0或者更高版本</strong><br>这是一个全局函数，用来记录数组中唯一值的数量。<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="func"><span class="keyword">func</span> <span class="title">countUniques</span><span class="generics">&lt;T: Comparable&gt;</span><span class="params">(array: Array&lt;T&gt;)</span></span> -&gt; <span class="type">Int</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> sorted = array.<span class="built_in">sort</span>(&lt;)</span><br><span class="line">  <span class="keyword">let</span> initial: (<span class="type">T</span>?, <span class="type">Int</span>) = (.<span class="type">None</span>, <span class="number">0</span>)</span><br><span class="line">  <span class="keyword">let</span> reduced = sorted.<span class="built_in">reduce</span>(initial) &#123; ($<span class="number">1</span>, $<span class="number">0.0</span> == $<span class="number">1</span> ? $<span class="number">0.1</span> : $<span class="number">0.1</span> + <span class="number">1</span>) &#125;</span><br><span class="line">  <span class="keyword">return</span> reduced.<span class="number">1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>它使用&lt;和==操作符，所以T类型需要遵循Comparable协议。<br>可以像下面这样调用它：<br><figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">countUniques([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">3</span>]) // <span class="literal">result</span> <span class="keyword">is</span> <span class="number">3</span></span><br></pre></td></tr></table></figure></p>
+<p>重写这个函数，让它作为数组Array的方法，使得可以这样调用：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">3</span>].<span class="function"><span class="title">countUniques</span><span class="params">()</span></span> <span class="comment">// should print 3</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>答案</strong>：</p>
+<blockquote>
+<p>在Swift2.0中，泛型是可以被扩展的，但需要类型约束限制，如果泛型不满足约束，那么扩展也是不可见或者不可访问的。<br>因此，全局函数countUniques可以被重写为数组Array的扩展：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">extension</span> <span class="title">Array</span> <span class="title">where</span> <span class="title">Element</span>: <span class="title">Comparable</span> </span>&#123;</span><br><span class="line">  <span class="func"><span class="keyword">func</span> <span class="title">countUniques</span><span class="params">()</span></span> -&gt; <span class="type">Int</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> sorted = <span class="built_in">sort</span>(&lt;)</span><br><span class="line">    <span class="keyword">let</span> initial: (<span class="type">Element</span>?, <span class="type">Int</span>) = (.<span class="type">None</span>, <span class="number">0</span>)</span><br><span class="line">    <span class="keyword">let</span> reduced = sorted.<span class="built_in">reduce</span>(initial) &#123; ($<span class="number">1</span>, $<span class="number">0.0</span> == $<span class="number">1</span> ? $<span class="number">0.1</span> : $<span class="number">0.1</span> + <span class="number">1</span>) &#125;</span><br><span class="line">    <span class="keyword">return</span> reduced.<span class="number">1</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>注意这个被重写的方法只有当泛型的类型Element实现了Comparable协议才是有效的。例如，当你用装满UIView的数组调用这个方法时编译器会提示错误：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import UIKit</span><br><span class="line">let <span class="tag">a</span> = [<span class="function"><span class="title">UIView</span><span class="params">()</span></span>, <span class="function"><span class="title">UIView</span><span class="params">()</span></span>]</span><br><span class="line"><span class="tag">a</span>.<span class="function"><span class="title">countUniques</span><span class="params">()</span></span> <span class="comment">// compiler error here because UIView doesn't implement Comparable</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>问题 #5 - Swift2.0或者更高版本</strong><br>下面是一个计算两个可选类型除法的函数。在计算之前满足以下三个条件：</p>
+<ul>
+<li>被除数不能为空（not nil）</li>
+<li>除数不能为空（not nil）</li>
+<li>除数不能为0<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">func divide(dividend: <span class="type">Double</span>?, by divisor: <span class="type">Double</span>?) -&gt; <span class="type">Double</span>? &#123;</span><br><span class="line">    <span class="keyword">if</span> dividend == .<span class="type">None</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> .<span class="type">None</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> divisor == .<span class="type">None</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> .<span class="type">None</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> divisor == <span class="number">0</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> .<span class="type">None</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dividend<span class="comment">! / divisor!</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>这段代码能够按照预期的那样进行工作，但同时存在两个问题：</p>
+<ul>
+<li>前置条件，可以考虑利用guard关键字</li>
+<li>使用了强制解包<br>改进这个函数，使用guard条件并且避免使用强制解包.<br><strong>答案</strong>：<blockquote>
+<p>在Swift2.0中引用guard语句关键字，如果不满足时，guard会提供一个退出路径。这个关键字在判断预置条件时非常有用，能更加清晰表达条件，不需要采用金字塔似的多重嵌套if语句，下面是一个例子：</p>
+<figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">guard dividend <span class="subst">!=</span> <span class="built_in">.</span><span class="literal">None</span> <span class="keyword">else</span> &#123; <span class="keyword">return</span> <span class="built_in">.</span><span class="literal">None</span> &#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<p>它还可以用在可选绑定上，能够访问解包后的变量：<br><figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">guard <span class="keyword">let</span> dividend <span class="subst">=</span> dividend <span class="keyword">else</span> &#123; <span class="keyword">return</span> <span class="built_in">.</span><span class="literal">None</span> &#125;</span><br></pre></td></tr></table></figure></p>
+<p>因此重写后的divide函数如下：<br><figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">func divide(dividend: Double<span class="subst">?</span>, <span class="keyword">by</span> divisor: Double<span class="subst">?</span>) <span class="subst">-&gt; </span>Double<span class="subst">?</span> &#123;</span><br><span class="line">      guard <span class="keyword">let</span> dividend <span class="subst">=</span> dividend <span class="keyword">else</span> &#123; <span class="keyword">return</span> <span class="built_in">.</span><span class="literal">None</span> &#125;</span><br><span class="line">      guard <span class="keyword">let</span> divisor <span class="subst">=</span> divisor <span class="keyword">else</span> &#123; <span class="keyword">return</span> <span class="built_in">.</span><span class="literal">None</span> &#125;</span><br><span class="line">      guard divisor <span class="subst">!=</span> <span class="number">0</span> <span class="keyword">else</span> &#123; <span class="keyword">return</span> <span class="built_in">.</span><span class="literal">None</span> &#125;</span><br><span class="line">      <span class="keyword">return</span> dividend <span class="subst">/</span> divisor</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>注意在最后一行没有隐士解包操作符，是因为dividend和divisor已经被解包存储，并且是非可选不可变的。<br>而且可以成组地监视guard条件，可以让函数变得更加简单：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="func"><span class="keyword">func</span> <span class="title">divide</span><span class="params">(dividend: Double?, by divisor: Double?)</span></span> -&gt; <span class="type">Double</span>? &#123;</span><br><span class="line">      guard <span class="keyword">let</span> dividend = dividend, divisor = divisor <span class="keyword">where</span> divisor != <span class="number">0</span> <span class="keyword">else</span> &#123; <span class="keyword">return</span> .<span class="type">None</span> &#125;</span><br><span class="line">      <span class="keyword">return</span> dividend / divisor</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>现在只有两个guard条件，因为使用where语句判断解包后的变量divisor是否为0。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1201822-b5eacfdc495e7819.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片来自简书"></p>
+<h2 id="高级">高级</h2><p><strong>问题 #1 - Swift1.0或者更高版本</strong><br>思考以下用结构体定义的温度计：<br><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> struct Thermometer &#123;</span><br><span class="line">  <span class="keyword">public</span> <span class="variable"><span class="keyword">var</span> temperature</span>: <span class="typename">Double</span></span><br><span class="line">  <span class="keyword">public</span> init(temperature: <span class="typename">Double</span>) &#123;</span><br><span class="line">    self.temperature = temperature</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>创建一个实例，可以用下面的方式：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">var</span> t: Thermometer = <span class="function"><span class="title">Thermometer</span><span class="params">(temperature:<span class="number">56.8</span>)</span></span></span><br></pre></td></tr></table></figure></p>
+<p>但最好是使用下面方式进行初始化：<br><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable"><span class="keyword">var</span> thermometer</span>: Thermometer = <span class="number">56.8</span></span><br></pre></td></tr></table></figure></p>
+<p>这可以做到吗？应该怎样做？<br><strong>答案</strong>：</p>
+<blockquote>
+<p>Swift定义了以下协议，通过使用赋值操作符，用字面值直接初始化：</p>
+<ul>
+<li>NilLiteralConvertible</li>
+<li>BooleanLiteralConvertible</li>
+<li>IntegerLiteralConvertible</li>
+<li>FloatLiteralConvertible</li>
+<li>UnicodeScalarLiteralConvertible</li>
+<li>ExtendedGraphemeClusterLiteralConvertible</li>
+<li>StringLiteralConvertible</li>
+<li>ArrayLiteralConvertible</li>
+<li>DictionaryLiteralConvertible<br>采用相对应的协议，提供一个公有的构造器，允许字面值方式初始化它。在这个温度计这个例子中，需要实现FloatLiteralConvertible协议：<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">extension</span> <span class="title">Thermometer</span> : <span class="title">FloatLiteralConvertible</span> </span>&#123;</span><br><span class="line">  public <span class="keyword">init</span>(floatLiteral value: <span class="type">FloatLiteralType</span>) &#123;</span><br><span class="line">    <span class="keyword">self</span>.<span class="keyword">init</span>(temperature: value)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</blockquote>
+<p>现在可以使用float值创建一个实例了：<br><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable"><span class="keyword">var</span> thermometer</span>: Thermometer = <span class="number">56.8</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>问题 #2 - Swift1.0或者更高版本</strong><br>Swift中定义了运算操作符和逻辑操作符，用于操作不同的类型。当然，你可以自定义一些运算操作符，比如一元或者二元的。<br>定义一个^^幂操作符，并且同时满足以下要求：</p>
+<ul>
+<li>用两个Int型整数作为参数。</li>
+<li>返回幂函数的值，第一个参数为底数，第二个参数为指数。</li>
+<li>实现潜在的溢出错误。</li>
+</ul>
+<p><strong>答案</strong>：</p>
+<blockquote>
+<p>创建一个自定义运算符需要两步：声明和实现。<br>声明使用关键字operator，用于指定类型（一元或者二元），然后指定运算符的结合性和优先级。<br>在本例中，运算符是^^，类型是infix，结合性是右结合，优先级设置为155，鉴于乘法和除法的优先级是150。以下是运算符的声明：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">infix</span> <span class="keyword">operator</span> ^^ &#123; <span class="keyword">associativity</span> <span class="keyword">right</span> <span class="keyword">precedence</span> <span class="number">155</span> &#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>实现如下：<br><figure class="highlight openscad"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">func ^^<span class="params">(lhs: Int, rhs: Int)</span> -&gt; Int &#123;</span><br><span class="line">  <span class="built_in">let</span> l = Double<span class="params">(lhs)</span></span><br><span class="line">  <span class="built_in">let</span> r = Double<span class="params">(rhs)</span></span><br><span class="line">  <span class="built_in">let</span> p = <span class="built_in">pow</span><span class="params">(l, r)</span></span><br><span class="line">  return Int<span class="params">(p)</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>注意一点，实现没有考虑溢出的情况，如果运算结果超过Int.max,将会产生运行时错误。</p>
+<p><strong>问题 #3 - Swift1.0或者更高版本</strong><br>你能像下面这样用原始值定义枚举类型吗？为什么？<br><figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">enum</span> Edges : (<span class="type">Double</span>, <span class="type">Double</span>) &#123;</span><br><span class="line">  <span class="keyword">case</span> TopLeft = (<span class="number">0.0</span>, <span class="number">0.0</span>)</span><br><span class="line">  <span class="keyword">case</span> TopRight = (<span class="number">1.0</span>, <span class="number">0.0</span>)</span><br><span class="line">  <span class="keyword">case</span> BottomLeft = (<span class="number">0.0</span>, <span class="number">1.0</span>)</span><br><span class="line">  <span class="keyword">case</span> BottomRight = (<span class="number">1.0</span>, <span class="number">1.0</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>答案</strong>：</p>
+<blockquote>
+<p>不能，原始值的类型必须遵循以下条件：</p>
+<ul>
+<li>实现Equatable协议</li>
+<li>必须是以下文字转换的类型：<ul>
+<li>Int</li>
+<li>String</li>
+<li>Character</li>
+</ul>
+</li>
+</ul>
+<p>在以上代码中，原始数值类型是元组类型，即使元组中的数值满足条件，也是不兼容的。</p>
+</blockquote>
+<p><strong>问题 #4 - Swift2.0或者更高版本</strong><br>思考以下代码，定义了结构体Pizza，协议Pizzeria，在协议扩展中实现默认方法makeMargherita()。<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Pizza</span> </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> ingredients: [<span class="type">String</span>]</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="class"><span class="keyword">protocol</span> <span class="title">Pizzeria</span> </span>&#123;</span><br><span class="line">  <span class="func"><span class="keyword">func</span> <span class="title">makePizza</span><span class="params">(ingredients: [String])</span></span> -&gt; <span class="type">Pizza</span></span><br><span class="line">  <span class="func"><span class="keyword">func</span> <span class="title">makeMargherita</span><span class="params">()</span></span> -&gt; <span class="type">Pizza</span></span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="class"><span class="keyword">extension</span> <span class="title">Pizzeria</span> </span>&#123;</span><br><span class="line">  <span class="func"><span class="keyword">func</span> <span class="title">makeMargherita</span><span class="params">()</span></span> -&gt; <span class="type">Pizza</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> makePizza([<span class="string">"tomato"</span>, <span class="string">"mozzarella"</span>])</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>然后定义一个餐馆Lombardis：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Lombardis</span>: <span class="title">Pizzeria</span> </span>&#123;</span><br><span class="line">  <span class="func"><span class="keyword">func</span> <span class="title">makePizza</span><span class="params">(ingredients: [String])</span></span> -&gt; <span class="type">Pizza</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="type">Pizza</span>(ingredients: ingredients)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="func"><span class="keyword">func</span> <span class="title">makeMargherita</span><span class="params">()</span></span> -&gt; <span class="type">Pizza</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> makePizza([<span class="string">"tomato"</span>, <span class="string">"basil"</span>, <span class="string">"mozzarella"</span>])</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>下面代码创建了Lombardis的两个实例。哪一个会使用“basil”来做披萨？<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">let lombardis1: Pizzeria = <span class="function"><span class="title">Lombardis</span><span class="params">()</span></span></span><br><span class="line">let lombardis2: Lombardis = <span class="function"><span class="title">Lombardis</span><span class="params">()</span></span></span><br><span class="line"> </span><br><span class="line">lombardis1.<span class="function"><span class="title">makeMargherita</span><span class="params">()</span></span></span><br><span class="line">lombardis2.<span class="function"><span class="title">makeMargherita</span><span class="params">()</span></span></span><br></pre></td></tr></table></figure></p>
+<p><strong>答案</strong>：</p>
+<blockquote>
+<p>两个都会。协议Pizzeria声明了makeMargherita()方法，并且提供了一个默认的实现。在Lombardis实现中，这个方法被重写了。因为这个方法在协议中声明了，在Runtime时能正确的被调用。<br>如果协议中没有声明makeMargherita()方法，但是在协议的扩展中又默认实现了 这个方法会怎样？<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">protocol</span> <span class="title">Pizzeria</span> </span>&#123;</span><br><span class="line">  <span class="func"><span class="keyword">func</span> <span class="title">makePizza</span><span class="params">(ingredients: [String])</span></span> -&gt; <span class="type">Pizza</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">extension</span> <span class="title">Pizzeria</span> </span>&#123;</span><br><span class="line">  <span class="func"><span class="keyword">func</span> <span class="title">makeMargherita</span><span class="params">()</span></span> -&gt; <span class="type">Pizza</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> makePizza([<span class="string">"tomato"</span>, <span class="string">"mozzarella"</span>])</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>在这种情况下，只有lombardis2能用“basil”来做披萨，而lombardis1则不会，因为它调用的是扩展中默认的方法。</p>
+<p><strong>问题 #5 - Swift2.0或者更高版本</strong><br>下面代码会有编译错误，你能指出在哪个地方吗？为什么？<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Kitten</span> </span>&#123;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="func"><span class="keyword">func</span> <span class="title">showKitten</span><span class="params">(kitten: Kitten?)</span></span> &#123;</span><br><span class="line">  guard <span class="keyword">let</span> k = kitten <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"There is no kitten"</span>)</span><br><span class="line">  &#125;</span><br><span class="line"> </span><br><span class="line">  <span class="built_in">print</span>(k)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>提示：有三种方式可以fix它<br><strong>答案</strong>：</p>
+<blockquote>
+<p>在guard中else语句体中需要有退出路径，用return返回，或者抛出一个异常或者调用@noreturn。最简单的方式是return语句：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="func"><span class="keyword">func</span> <span class="title">showKitten</span><span class="params">(kitten: Kitten?)</span></span> &#123;</span><br><span class="line">  guard <span class="keyword">let</span> k = kitten <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"There is no kitten"</span>)</span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">print</span>(k)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>下面版本是抛出异常：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">KittenError</span>: <span class="title">ErrorType</span> </span>&#123;</span><br><span class="line">  <span class="keyword">case</span> <span class="type">NoKitten</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Kitten</span> </span>&#123;</span><br><span class="line">&#125;</span><br><span class="line"><span class="func"><span class="keyword">func</span> <span class="title">showKitten</span><span class="params">(kitten: Kitten?)</span></span> throws &#123;</span><br><span class="line">  guard <span class="keyword">let</span> k = kitten <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"There is no kitten"</span>)</span><br><span class="line">    throw <span class="type">KittenError</span>.<span class="type">NoKitten</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">print</span>(k)</span><br><span class="line">&#125;</span><br><span class="line">try showKitten(<span class="literal">nil</span>)</span><br></pre></td></tr></table></figure></p>
+<p>最后一个方法是调用@noreturn中的一个函数fatalError()：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Kitten</span> </span>&#123;</span><br><span class="line">&#125;</span><br><span class="line"><span class="func"><span class="keyword">func</span> <span class="title">showKitten</span><span class="params">(kitten: Kitten?)</span></span> &#123;</span><br><span class="line">  guard <span class="keyword">let</span> k = kitten <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"There is no kitten"</span>)</span><br><span class="line">    fatalError()</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">print</span>(k)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="口头答疑">口头答疑</h1><p><img src="http://upload-images.jianshu.io/upload_images/1201822-2d6da5268dc60a17.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="绝地战士"></p>
+<h2 id="初级-1">初级</h2><p><strong>问题 #1 - Swift1.0或者更高版本</strong><br>可选是什么？可以解决什么问题？<br><strong>答案</strong>：</p>
+<blockquote>
+<p>可选可以使得任何类型的变量都能表达缺省值。在Objective-C中，缺省值只适用于引用类型，通常被指定为nil。对于基础类型的变量（例如int, float）则没有这个功能，<br>而Swift把缺省值概念扩展到引用类型和值类型中。一个可选变量在任何时候可以有值或者为nil。</p>
+</blockquote>
+<p><strong>问题 #2 - Swift1.0或者更高版本</strong><br>什么时候使用结构体？什么时候使用类？<br><strong>答案</strong>：</p>
+<blockquote>
+<p>目前关于使用类还是结构体这个问题，有许多的争论。在函数式编程倾向于使用值类型，而面向对象编程中更喜欢用类。<br>在Swift中，类和结构体有很多不相同的功能，主要有下面几点：</p>
+<ul>
+<li>类支持继承，而结构体不支持。</li>
+<li>类是引用类型，结构体是值类型</li>
+</ul>
+<p>并没有统一的规则决定孰好孰坏。通常推荐使用最适合的工具完成特定的目标，在swift中比较好的做法是使用结构体，除非你需要用到继承或者引用的时候才使用类。<br>主要因为在运行时，结构体的性能优于类的，结构体的方法调用是静态绑定的，而类是在Runtime时动态解析的。</p>
+</blockquote>
+<p><strong>问题 #3 - Swift1.0或者更高版本</strong><br>泛型是什么？用来解决什么问题？<br><strong>答案</strong>：</p>
+<blockquote>
+<p>泛型可以使某一个类型的算法能够更安全的工作。在Swift中泛型可以用在函数和数据类型上，如类，结构体和枚举类型。<br>泛型还能解决代码重复的问题。普遍现象是当你已经有一个带参数的方法，但你又不得不再重新写一遍有着类似类型的方法。<br>在下面的例子中，第二个函数就像是第一个函数的“clone”，它只是把传入参数的类型从字符串变为整型。<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="func"><span class="keyword">func</span> <span class="title">areIntEqual</span><span class="params">(x: Int, <span class="number">_</span> y: Int)</span></span> -&gt; <span class="type">Bool</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> x == y</span><br><span class="line">&#125;</span><br><span class="line"><span class="func"><span class="keyword">func</span> <span class="title">areStringsEqual</span><span class="params">(x: String, <span class="number">_</span> y: String)</span></span> -&gt; <span class="type">Bool</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> x == y</span><br><span class="line">&#125;</span><br><span class="line">areStringsEqual(<span class="string">"ray"</span>, <span class="string">"ray"</span>) <span class="comment">// true</span></span><br><span class="line">areIntEqual(<span class="number">1</span>, <span class="number">1</span>) <span class="comment">// true</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>这时，Objective-C的开发者可能会想到用NSObject可以解决这个问题：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="type">Foundation</span></span><br><span class="line"><span class="func"><span class="keyword">func</span> <span class="title">areTheyEqual</span><span class="params">(x: NSObject, <span class="number">_</span> y: NSObject)</span></span> -&gt; <span class="type">Bool</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> x == y</span><br><span class="line">&#125;</span><br><span class="line">areTheyEqual(<span class="string">"ray"</span>, <span class="string">"ray"</span>) <span class="comment">// true</span></span><br><span class="line">areTheyEqual(<span class="number">1</span>, <span class="number">1</span>) <span class="comment">// true</span></span><br></pre></td></tr></table></figure></p>
+<p>虽然这种方式是能解决问题，但是在编译期间是不安全的。因为它会允许比较String类型和Integer类型，就像下面这样：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">areTheyEqual</span><span class="params">(<span class="number">1</span>, <span class="string">"ray"</span>)</span></span></span><br></pre></td></tr></table></figure></p>
+<p>虽然应用程序不会crash，但是允许字符串和整型进行比较，会出现让你想不到的结果。<br>使用泛型的话，可以把两个函数合成一个，同时又能保证类型是安全的。下面是一个具体实现：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="func"><span class="keyword">func</span> <span class="title">areTheyEqual</span><span class="generics">&lt;T: Equatable&gt;</span><span class="params">(x: T, <span class="number">_</span> y: T)</span></span> -&gt; <span class="type">Bool</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> x == y</span><br><span class="line">&#125;</span><br><span class="line">areTheyEqual(<span class="string">"ray"</span>, <span class="string">"ray"</span>)</span><br><span class="line">areTheyEqual(<span class="number">1</span>, <span class="number">1</span>)</span><br></pre></td></tr></table></figure></p>
+<p>这个例子是测试两个数是否相等，你可以限制传入参数类型是任意类型，只要这个类型实现了Equatable协议。这段代码可以得到你想要的结果并且能防止传入不同参数类型。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1201822-7bfce4c0e827ba0a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Two birds, one stone"></p>
+<p><strong>问题 #4 - Swift1.0或者更高版本</strong><br>在某些情况下，你不得不使用隐式解包可选？什么场合？为什么？<br><strong>答案</strong>：</p>
+<blockquote>
+<p>下面情况下需要使用隐式解包可选：</p>
+<ol>
+<li>当属性在初始化阶段不能为空的时候。一个典型的例子是IB的输出口，它总是要初始化的。使用它之前已经在IB中配置，outlet确保在使用之前值不为空。</li>
+<li>解决强引用循环的问题，当两个实例相互引用，需要一个实例是非空引用。在这种情况下，一个实例可以标注unowned，另一个使用隐式解包可选。<br>提示：不要使用隐式解包可选，除非你必须使用时。如果使用它不当时，会增加Runtime时crash的机率。</li>
+</ol>
+</blockquote>
+<p><strong>问题 #5 - Swift1.0或者更高版本</strong><br>解包可选类型方法是什么？它们的安全性怎样？<br>提示：有7种方法<br><strong>答案</strong>：</p>
+<blockquote>
+<ul>
+<li>forced unwrapping ! operator — unsafe</li>
+<li>implicitly unwrapped variable declaration — unsafe in many cases</li>
+<li>optional binding — safe</li>
+<li>optional chaining — safe</li>
+<li>nil coalescing operator — safe</li>
+<li>new Swift 2.0 guard statement — safe</li>
+<li>new Swift 2.0 optional pattern — safe</li>
+</ul>
+</blockquote>
+<p><img src="http://upload-images.jianshu.io/upload_images/1201822-a000d49e3f1b2d6b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Believe"></p>
+<h2 id="中级-1">中级</h2><p><strong>问题 #1 - Swift1.0或者更高版本</strong><br>Swift是面向对象语言还是函数式语言？<br><strong>答案</strong>：</p>
+<blockquote>
+<p>Swift是混合式语言，两种都支持。<br>它实现面向对象的三个基本特征：</p>
+<ul>
+<li>封装</li>
+<li>继承</li>
+<li>多态</li>
+</ul>
+<p>和函数式语言相比，Swift有一些不同，虽然它满足函数式语言基本要求，但并不是完全成熟的函数式编程语言。</p>
+</blockquote>
+<p><strong>问题 #2 - Swift1.0或者更高版本</strong><br>下面功能，哪一个在Swift中有？</p>
+<ol>
+<li>泛型类</li>
+<li>泛型数据结构</li>
+<li>泛型协议</li>
+</ol>
+<p><strong>答案</strong>：</p>
+<blockquote>
+<p>1和2在Swift中有。泛型可以用在类，结构体，枚举类型，全局函数和方法中。<br>3可以通过关键字typealias部分实现。它并不是泛型，只是占位符名字而已。它常被看作是关联数据类型，采用协议时才会被定义。</p>
+</blockquote>
+<p><strong>问题 #3 - Swift1.0或者更高版本</strong><br>在Objective-C中，一个常量可以像下面进行声明：<br><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> number = <span class="number">0</span>;</span><br></pre></td></tr></table></figure></p>
+<p>下面是Swift中的：<br><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="variable">number =</span> <span class="number">0</span></span><br></pre></td></tr></table></figure></p>
+<p>他们之间有什么不同吗？如果是的，你能解释一下吗？<br><strong>答案</strong>：</p>
+<blockquote>
+<p>const是一个变量在编译期间被初始化值或者在编译期间表达式的值。<br>通过let关键字创建常量是在Runtime时初始化的，它能够用用静态的或者动态表达式的结果初始化。注意它的值只能被初始化一次。</p>
+</blockquote>
+<p><strong>问题 #4 - Swift1.0或者更高版本</strong><br>声明一个静态属性或者函数，你可以使用关键字static来修饰值类型。以下是一个结构体的例子：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Sun</span> </span>&#123;</span><br><span class="line">  <span class="keyword">static</span> <span class="func"><span class="keyword">func</span> <span class="title">illuminate</span><span class="params">()</span></span> &#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>对于类来说，你可以使用static或者class修饰符。虽然它们完成同样的功能，但实际上是不同的。你能解释一下它们之间有什么不同吗？</p>
+<p><strong>答案</strong>:</p>
+<blockquote>
+<p>使用static关键字，静态属性和静态函数是不能被重写的，但当使用class关键字，你可以重写属性和函数。<br>其实，对于类来说，static关键字是class final的别名而已。<br>例如，你编译下面这些code时，当你要重写illuminate()函数时，编译器提示错误：<br><figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">class <span class="type">Star</span> &#123;</span><br><span class="line">  class func spin() &#123;&#125;</span><br><span class="line">  <span class="keyword">static</span> func illuminate() &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line">class <span class="type">Sun</span> : <span class="type">Star</span> &#123;</span><br><span class="line">  override class func spin() &#123;</span><br><span class="line">    super.spin()</span><br><span class="line">  &#125;</span><br><span class="line">  override <span class="keyword">static</span> func illuminate() &#123; // error: class <span class="keyword">method</span> overrides a 'final' class <span class="keyword">method</span></span><br><span class="line">    super.illuminate()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p><strong>问题 #5 - Swift1.0或者更高版本</strong><br>使用extension可以增加存储属性吗？解释一下<br><strong>答案</strong>：</p>
+<blockquote>
+<p>是不能的。extension是用来给存在的类型添加新行为的，并不能改变类型或者接口本身。如果你增加存储属性，你需要额外的内存空间存储新的值。extension是不能管理这样的任务的。</p>
+</blockquote>
+<h1 id="高级-1">高级</h1><p><strong>问题 #1 - Swift1.2</strong><br>在Swift1.2中，你能解释一下用泛型声明枚举类型的问题吗？以两个泛型T和V的枚举类型Either为例，Left为关联T类型，Right关联V类型。<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">Either</span>&lt;<span class="title">T</span>, <span class="title">V</span>&gt; &#123;</span></span><br><span class="line">  <span class="keyword">case</span> Left(T)</span><br><span class="line">  <span class="keyword">case</span> Right(V)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>提示：检验这个问题要用Xcode工程，不要在Playground中。注意这个问题和Swift1.2有关，你需要使用Xcode6.4版本。</p>
+</blockquote>
+<p><strong>答案</strong>：</p>
+<blockquote>
+<p>编译的时候会提示以下问题：<br><figure class="highlight capnproto"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">unimplemented IR generation feature non-<span class="keyword">fixed</span> multi-payload <span class="class"><span class="keyword">enum</span> <span class="title">layout</span></span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>问题在于不能提前知道T分配内存大小，主要取决于T类型本身。但是在枚举类型中需要知道固定大小。<br>最常用的解决方法是采用一个泛型Box，如下：<br><figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="type">Box</span>&lt;<span class="type">T</span>&gt; &#123;</span><br><span class="line">  let value: <span class="type">T</span></span><br><span class="line">  init<span class="container">(<span class="title">_</span> <span class="title">value</span>: <span class="type">T</span>)</span> &#123;</span><br><span class="line">    self.value = value</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">enum <span class="type">Either</span>&lt;<span class="type">T</span>, <span class="type">V</span>&gt; &#123;</span><br><span class="line">  case <span class="type">Left</span><span class="container">(<span class="type">Box</span>&lt;<span class="type">T</span>&gt;)</span></span><br><span class="line">  case <span class="type">Right</span><span class="container">(<span class="type">Box</span>&lt;<span class="type">V</span>&gt;)</span></span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure></p>
+<p>这个问题只会影响Swift1.0或之后版本，在Swift2.0中已经解决。</p>
+<p><strong>问题 #2 - Swift1.0或者更高版本</strong><br>闭包是值类型还是引用类型？<br><strong>答案</strong>：</p>
+<blockquote>
+<p>闭包是引用类型。如果一个闭包赋值给一个变量，这个变量又复制一份copy给另一个变量，那么变量所引用的闭包和捕获的列表也会copy一份。</p>
+</blockquote>
+<p><strong>问题 #3 - Swift1.0或者更高版本</strong><br>UInt类型用来存储无符号整数。它实现如下一个用有符号的整数构造器：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">init</span><span class="params">(_ value: Int)</span></span></span><br></pre></td></tr></table></figure></p>
+<p>但是如果你提供一个负整数的话，下面代码会产生编译错误。<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let myNegative = <span class="function"><span class="title">UInt</span><span class="params">(-<span class="number">1</span>)</span></span></span><br></pre></td></tr></table></figure></p>
+<p>知道计算机负数是用二进制补码作为一个正数进行表示，你怎样把Int类型的负整数转为UInt数？</p>
+<p><strong>答案</strong>：</p>
+<blockquote>
+<p>已经有一个初始化器可以完成：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">UInt</span><span class="params">(bitPattern: Int)</span></span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p><strong>问题 #4 - Swift1.0或者更高版本</strong><br>你能描述一下在Swift中哪些地方会产生循环引用？有什么解决办法吗？</p>
+<blockquote>
+<p>当两个实例之间相互进行强引用的时候，就会引起循环引用。两个实例都不会释放内存，就会造成内存泄露。可用weak或者unowned打破实例之间的强引用问题，这样两个实例才有机会释放内存空间。</p>
+</blockquote>
+<p><strong>问题 #5 - Swift1.0或者更高版本</strong><br>Swift2.0引用了一个新关键字能产生递归枚举类型。下面是一个带有Node节点的枚举类型，Node关联值类型，T和list：<br><figure class="highlight capnproto"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">List</span>&lt;T&gt; </span>&#123;</span><br><span class="line">    case Node(T, <span class="built_in">List</span>&lt;T&gt;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>那个关键字是什么？<br><strong>答案</strong>：</p>
+<blockquote>
+<p>关键字indirect允许递归枚举类型，像下面这样：<br><figure class="highlight capnproto"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">List</span>&lt;T&gt; </span>&#123;</span><br><span class="line">    indirect case Cons(T, <span class="built_in">List</span>&lt;T&gt;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h1 id="结束语">结束语</h1><p>所有的Swfit资源都来自于官方文档《The Swift Programming Language》，学习一门语言最好的方法是使用它。所以可以在Playground使用它或者在实际项目中运用它，Swift能够和Objective-C进行无缝对接。本文是翻译<a href="1. http://www.raywenderlich.com/110982/swift-interview-questions-answers">Ray</a>的博客。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/iOS/" rel="tag">#iOS</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/12/18/pragma处理警告/" rel="next" title="#pragma处理警告">
+                <i class="fa fa-chevron-left"></i> #pragma处理警告
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/02/03/OC中的self和super/" rel="prev" title="OC中的self和super">
+                OC中的self和super <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/01/17/Swif面试题/"
+           data-title="Swif面试题" data-url="http://yoursite.com/2016/01/17/Swif面试题/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://tp3.sinaimg.cn/1503812550/180/5742227485/1"
+               alt="孟涛" />
+          <p class="site-author-name" itemprop="name">孟涛</p>
+          <p class="site-description motion-element" itemprop="description">再不疯狂，我们就老了</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">19</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/TedMore" target="_blank" title="github">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/u/1503812550/home?wvr=5" target="_blank" title="weibo">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.github.com" title="Github" target="_blank">Github</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#笔试题"><span class="nav-number">1.</span> <span class="nav-text">笔试题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#初级"><span class="nav-number">1.1.</span> <span class="nav-text">初级</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#中级"><span class="nav-number">1.2.</span> <span class="nav-text">中级</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#高级"><span class="nav-number">1.3.</span> <span class="nav-text">高级</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#口头答疑"><span class="nav-number">2.</span> <span class="nav-text">口头答疑</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#初级-1"><span class="nav-number">2.1.</span> <span class="nav-text">初级</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#中级-1"><span class="nav-number">2.2.</span> <span class="nav-text">中级</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#高级-1"><span class="nav-number">3.</span> <span class="nav-text">高级</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#结束语"><span class="nav-number">4.</span> <span class="nav-text">结束语</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+<div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">孟涛</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+
+<span id="busuanzi_container_site_pv">
+    |  本站总访问量<span id="busuanzi_value_site_pv"></span>次
+</span>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"tedmorecomment"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+
+
+
+</body>
+</html>
