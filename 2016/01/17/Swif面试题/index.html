@@ -92,12 +92,12 @@
 <meta property="og:site_name" content="孟涛的技术博客">
 <meta property="og:description" content="Swift语言至今诞生有一年多的时间了，已经成为当前最流行语言之一。虽然它的语法简单好用，但实际上Swift是一门非常复杂的语言。因为它不仅是面向对象的同时又是函数式编程语言。本文主要介绍Swift常见的一些面试问题，你可以用这些问题向面试者提问，也可以用来测试你自己目前所掌握的Swift知识，如果你不清楚问题答案的话也不用太担心，因为每个问题下面都有相应的答案。
 问题主要分为两个部分，笔试题和口">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1201822-25bf8951983ca708.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1201822-b5eacfdc495e7819.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1201822-2d6da5268dc60a17.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1201822-7bfce4c0e827ba0a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1201822-a000d49e3f1b2d6b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2016-06-01T23:37:16.000Z">
+<meta property="og:image" content="http://yoursite.com/images/I_know_it.png">
+<meta property="og:image" content="http://yoursite.com/images/step_in.png">
+<meta property="og:image" content="http://yoursite.com/images/swift.png">
+<meta property="og:image" content="http://yoursite.com/images/two_birds.png">
+<meta property="og:image" content="http://yoursite.com/images/believe.png">
+<meta property="og:updated_time" content="2016-06-02T14:43:50.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Swif面试题">
 <meta name="twitter:description" content="Swift语言至今诞生有一年多的时间了，已经成为当前最流行语言之一。虽然它的语法简单好用，但实际上Swift是一门非常复杂的语言。因为它不仅是面向对象的同时又是函数式编程语言。本文主要介绍Swift常见的一些面试问题，你可以用这些问题向面试者提问，也可以用来测试你自己目前所掌握的Swift知识，如果你不清楚问题答案的话也不用太担心，因为每个问题下面都有相应的答案。
@@ -223,9 +223,39 @@
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="#" class="st-search-show-outputs">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  <form class="site-search-form">
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', '8FRxc7w1z2EjJnb-yqT4','2.0.0');
+</script>
+
+
+
+    </div>
   
 </nav>
 
@@ -380,7 +410,7 @@
 <p><strong>注意</strong>：以上每一步的代码编译运行后都会输出同样的结果，你可以选择使用单字节的闭包。</p>
 <p><strong>问题 #5 - Swift1.0或者更高版本</strong><br>下面代码定义<em>Address</em>和<em>Person</em>两个类，创建Ray和Brian两个实例。<br><figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">class Address &#123;</span><br><span class="line">  var fullAddress: String</span><br><span class="line">  var city: String</span><br><span class="line"> </span><br><span class="line">  init(fullAddress: String, city: String) &#123;</span><br><span class="line">    self.fullAddress = fullAddress</span><br><span class="line">    self.city = city</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">class <span class="keyword">Person</span> &#123;</span><br><span class="line">  var name: String</span><br><span class="line">  var address: Address</span><br><span class="line"> </span><br><span class="line">  init(name: String, address: Address) &#123;</span><br><span class="line">    self.name = name</span><br><span class="line">    self.address = address</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">var headquarters = Address(fullAddress: <span class="string">"123 Tutorial Street"</span>, city: <span class="string">"Appletown"</span>)</span><br><span class="line">var ray = <span class="keyword">Person</span>(name: <span class="string">"Ray"</span>, address: headquarters)</span><br><span class="line">var brian = <span class="keyword">Person</span>(name: <span class="string">"Brian"</span>, address: headquarters)</span><br></pre></td></tr></table></figure></p>
 <p>假如Brian要搬迁到新的地址居住，所以你会这样更新他的住址：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brian<span class="class">.address</span><span class="class">.fullAddress</span> = <span class="string">"148 Tutorial Street"</span></span><br></pre></td></tr></table></figure></p>
-<p>这样做的话会发生什么？错在哪个地方？<br><img src="http://upload-images.jianshu.io/upload_images/1201822-25bf8951983ca708.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="I know it"><br><strong>答案</strong>：</p>
+<p>这样做的话会发生什么？错在哪个地方？<br><img src="/images/I_know_it.png" alt="I know it"><br><strong>答案</strong>：</p>
 <blockquote>
 <p>Ray也会更新地址。因为类Address是引用类型，headquarters是同一个实例，不论你是修改ray的地址还是brian的地址，都会改变headquarters地址。<br><strong>解决方法是为brian新创建一个地址。或者声明Address为结构体而不是类。</strong></p>
 </blockquote>
@@ -428,7 +458,7 @@
 <p>因此重写后的divide函数如下：<br><figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">func divide(dividend: Double<span class="subst">?</span>, <span class="keyword">by</span> divisor: Double<span class="subst">?</span>) <span class="subst">-&gt; </span>Double<span class="subst">?</span> &#123;</span><br><span class="line">      guard <span class="keyword">let</span> dividend <span class="subst">=</span> dividend <span class="keyword">else</span> &#123; <span class="keyword">return</span> <span class="built_in">.</span><span class="literal">None</span> &#125;</span><br><span class="line">      guard <span class="keyword">let</span> divisor <span class="subst">=</span> divisor <span class="keyword">else</span> &#123; <span class="keyword">return</span> <span class="built_in">.</span><span class="literal">None</span> &#125;</span><br><span class="line">      guard divisor <span class="subst">!=</span> <span class="number">0</span> <span class="keyword">else</span> &#123; <span class="keyword">return</span> <span class="built_in">.</span><span class="literal">None</span> &#125;</span><br><span class="line">      <span class="keyword">return</span> dividend <span class="subst">/</span> divisor</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>注意在最后一行没有隐士解包操作符，是因为dividend和divisor已经被解包存储，并且是非可选不可变的。<br>而且可以成组地监视guard条件，可以让函数变得更加简单：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="func"><span class="keyword">func</span> <span class="title">divide</span><span class="params">(dividend: Double?, by divisor: Double?)</span></span> -&gt; <span class="type">Double</span>? &#123;</span><br><span class="line">      guard <span class="keyword">let</span> dividend = dividend, divisor = divisor <span class="keyword">where</span> divisor != <span class="number">0</span> <span class="keyword">else</span> &#123; <span class="keyword">return</span> .<span class="type">None</span> &#125;</span><br><span class="line">      <span class="keyword">return</span> dividend / divisor</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>现在只有两个guard条件，因为使用where语句判断解包后的变量divisor是否为0。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1201822-b5eacfdc495e7819.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片来自简书"></p>
+<p><img src="/images/step_in.png" alt="图片来自简书"></p>
 <h2 id="高级">高级</h2><p><strong>问题 #1 - Swift1.0或者更高版本</strong><br>思考以下用结构体定义的温度计：<br><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> struct Thermometer &#123;</span><br><span class="line">  <span class="keyword">public</span> <span class="variable"><span class="keyword">var</span> temperature</span>: <span class="typename">Double</span></span><br><span class="line">  <span class="keyword">public</span> init(temperature: <span class="typename">Double</span>) &#123;</span><br><span class="line">    self.temperature = temperature</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>创建一个实例，可以用下面的方式：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">var</span> t: Thermometer = <span class="function"><span class="title">Thermometer</span><span class="params">(temperature:<span class="number">56.8</span>)</span></span></span><br></pre></td></tr></table></figure></p>
 <p>但最好是使用下面方式进行初始化：<br><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable"><span class="keyword">var</span> thermometer</span>: Thermometer = <span class="number">56.8</span></span><br></pre></td></tr></table></figure></p>
@@ -491,7 +521,7 @@
 </blockquote>
 <p>下面版本是抛出异常：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">KittenError</span>: <span class="title">ErrorType</span> </span>&#123;</span><br><span class="line">  <span class="keyword">case</span> <span class="type">NoKitten</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Kitten</span> </span>&#123;</span><br><span class="line">&#125;</span><br><span class="line"><span class="func"><span class="keyword">func</span> <span class="title">showKitten</span><span class="params">(kitten: Kitten?)</span></span> throws &#123;</span><br><span class="line">  guard <span class="keyword">let</span> k = kitten <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"There is no kitten"</span>)</span><br><span class="line">    throw <span class="type">KittenError</span>.<span class="type">NoKitten</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">print</span>(k)</span><br><span class="line">&#125;</span><br><span class="line">try showKitten(<span class="literal">nil</span>)</span><br></pre></td></tr></table></figure></p>
 <p>最后一个方法是调用@noreturn中的一个函数fatalError()：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Kitten</span> </span>&#123;</span><br><span class="line">&#125;</span><br><span class="line"><span class="func"><span class="keyword">func</span> <span class="title">showKitten</span><span class="params">(kitten: Kitten?)</span></span> &#123;</span><br><span class="line">  guard <span class="keyword">let</span> k = kitten <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"There is no kitten"</span>)</span><br><span class="line">    fatalError()</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">print</span>(k)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h1 id="口头答疑">口头答疑</h1><p><img src="http://upload-images.jianshu.io/upload_images/1201822-2d6da5268dc60a17.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="绝地战士"></p>
+<h1 id="口头答疑">口头答疑</h1><p><img src="/images/swift.png" alt="绝地战士"></p>
 <h2 id="初级-1">初级</h2><p><strong>问题 #1 - Swift1.0或者更高版本</strong><br>可选是什么？可以解决什么问题？<br><strong>答案</strong>：</p>
 <blockquote>
 <p>可选可以使得任何类型的变量都能表达缺省值。在Objective-C中，缺省值只适用于引用类型，通常被指定为nil。对于基础类型的变量（例如int, float）则没有这个功能，<br>而Swift把缺省值概念扩展到引用类型和值类型中。一个可选变量在任何时候可以有值或者为nil。</p>
@@ -513,7 +543,7 @@
 <p>虽然这种方式是能解决问题，但是在编译期间是不安全的。因为它会允许比较String类型和Integer类型，就像下面这样：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">areTheyEqual</span><span class="params">(<span class="number">1</span>, <span class="string">"ray"</span>)</span></span></span><br></pre></td></tr></table></figure></p>
 <p>虽然应用程序不会crash，但是允许字符串和整型进行比较，会出现让你想不到的结果。<br>使用泛型的话，可以把两个函数合成一个，同时又能保证类型是安全的。下面是一个具体实现：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="func"><span class="keyword">func</span> <span class="title">areTheyEqual</span><span class="generics">&lt;T: Equatable&gt;</span><span class="params">(x: T, <span class="number">_</span> y: T)</span></span> -&gt; <span class="type">Bool</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> x == y</span><br><span class="line">&#125;</span><br><span class="line">areTheyEqual(<span class="string">"ray"</span>, <span class="string">"ray"</span>)</span><br><span class="line">areTheyEqual(<span class="number">1</span>, <span class="number">1</span>)</span><br></pre></td></tr></table></figure></p>
 <p>这个例子是测试两个数是否相等，你可以限制传入参数类型是任意类型，只要这个类型实现了Equatable协议。这段代码可以得到你想要的结果并且能防止传入不同参数类型。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1201822-7bfce4c0e827ba0a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Two birds, one stone"></p>
+<p><img src="/images/two_birds.png" alt="Two birds, one stone"></p>
 <p><strong>问题 #4 - Swift1.0或者更高版本</strong><br>在某些情况下，你不得不使用隐式解包可选？什么场合？为什么？<br><strong>答案</strong>：</p>
 <blockquote>
 <p>下面情况下需要使用隐式解包可选：</p>
@@ -534,7 +564,7 @@
 <li>new Swift 2.0 optional pattern — safe</li>
 </ul>
 </blockquote>
-<p><img src="http://upload-images.jianshu.io/upload_images/1201822-a000d49e3f1b2d6b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Believe"></p>
+<p><img src="/images/believe.png" alt="Believe"></p>
 <h2 id="中级-1">中级</h2><p><strong>问题 #1 - Swift1.0或者更高版本</strong><br>Swift是面向对象语言还是函数式语言？<br><strong>答案</strong>：</p>
 <blockquote>
 <p>Swift是混合式语言，两种都支持。<br>它实现面向对象的三个基本特征：</p>
@@ -957,6 +987,26 @@
   
   
   
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+  </script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  </script>
+  <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
 
   
 
